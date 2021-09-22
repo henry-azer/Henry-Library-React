@@ -1,0 +1,90 @@
+:root {
+    --fontColor: #f1f1f1;
+    --citeColor: rgb(128, 128, 128);
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    height: 100vh;
+    background: #131316;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* HEADER START */
+.header {
+    background: white;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 300;
+    transition: 1s all;
+}
+
+.header .list-container {
+    padding-left: 40px;
+}
+
+.header .logo-container {
+    padding-left: 90px;
+}
+
+.header .user-container {
+    padding-right: 40px;
+}
+/* HEADER END */
+
+/* LEFT NAV START */
+.left-nav {
+    position: fixed;
+    display: flex;
+    left: -200px;
+    top: 52%;
+    transform: rotate(-90deg);
+}
+/* LEFT NAV END */
+
+/* HOME START */
+.home .main-content {
+    position: absolute;
+    top: 45%;
+    left: 22.5%;
+    text-align: center;
+    overflow: hidden;
+    color: var(--fontColor);
+}
+
+.main-content h1 {
+    font-size: 100px;
+    letter-spacing: 10px;
+    margin: 10px;
+    padding: 30px 100px;
+    border: 1px solid white;
+    text-transform: uppercase;
+}
+
+.main-content h2 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.main-content p {
+    font-size: 17px;
+}
+
+.main-content p cite {
+    font-size: 15px;
+    color: var(--citeColor);
+}
+/* HOME END */
