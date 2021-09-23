@@ -1,5 +1,8 @@
 import React from "react";
 
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+
 const header = () => {
     return (
         <nav className="header">
@@ -32,9 +35,16 @@ const header = () => {
                 data-aos-easing="ease-in"
                 data-aos="fade-down-left"
             >
-                <button className="signIn-btn">Sign In</button>
-                <button className="signUp-btn">Sign Up</button>
+                 <ButtonGroup
+                    variant="contained"
+                    aria-label="outlined primary button group"
+                >
+                    <Button>Log In</Button>
+                    <Button>Registry</Button>
+                </ButtonGroup>
             </div>
+
+            
         </nav>
     );
 };

@@ -16,7 +16,7 @@ const Home = () => {
             <Header />
             <LeftNav />
             <RightNav />
-            
+
             <div
                 className="home-background"
                 data-aos="fade"
@@ -27,7 +27,8 @@ const Home = () => {
 
             <div
                 className="main-content"
-                data-aos-duration="1000"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
                 data-aos="fade-up"
             >
                 <h2>To be a "Good Reader"</h2>

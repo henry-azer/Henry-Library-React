@@ -48,17 +48,60 @@ body {
 /* LEFT NAV START */
 .left-nav {
     position: fixed;
+    top: 44%;
+    transition: 1s all;
+}
+
+.left-nav .social-container {
     display: flex;
-    left: -200px;
-    top: 52%;
-    transform: rotate(-90deg);
+    text-align: center;
+    flex-direction: column;
+}
+
+.social-container .social-btn {
+    color: white;
+    padding: 5px;
+    margin: 0 0 10px 0;
+    transition: 1s all;
+}
+
+.social-container .social-btn:hover {
+    background: transparent;
+    color: rgb(163, 163, 163);
+    transition: 1s all;
 }
 /* LEFT NAV END */
+
+/* RIGHT NAV START */
+.right-nav {
+    position: fixed;
+    display: flex;
+    right: -10px;
+    top: 48%;
+    transform: rotate(90deg);
+}
+
+.right-nav .date-container {
+    font-family: "Share Tech Mono", monospace;
+    text-align: center;
+    color: #ffffff;
+}
+
+.date-container .time {
+    letter-spacing: 0.1em;
+    font-size: 22px;
+    padding: 5px 0;
+}
+.date-container .date {
+    letter-spacing: 0.1em;
+    font-size: 19px;
+}
+/* RIGHT NAV END */
 
 /* HOME START */
 .home .main-content {
     position: absolute;
-    top: 45%;
+    top: 48%;
     left: 22.5%;
     text-align: center;
     overflow: hidden;
