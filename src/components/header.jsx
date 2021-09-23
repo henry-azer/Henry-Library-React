@@ -1,7 +1,8 @@
 import React from "react";
 
+import Logo from "..//resources/logo/light-logo.png";
+
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 
 const header = () => {
     return (
@@ -13,7 +14,9 @@ const header = () => {
                 data-aos="fade-down-right"
                 data-aos-easing="ease-in"
             >
-                list
+                <Button className="item" >Feed</Button>
+                <Button className="item" >Library</Button>
+                <Button className="item" >About us</Button>
             </div>
 
             <div
@@ -24,7 +27,12 @@ const header = () => {
                 data-aos-easing="ease-in"
             >
                 <div to="/" className="logo">
-                    Henry <em>Library</em>
+                    <img
+                        src={Logo}
+                        draggable="false"
+                        alt="henry library"
+                        className="logo-pic"
+                    />
                 </div>
             </div>
 
@@ -35,16 +43,9 @@ const header = () => {
                 data-aos-easing="ease-in"
                 data-aos="fade-down-left"
             >
-                 <ButtonGroup
-                    variant="contained"
-                    aria-label="outlined primary button group"
-                >
-                    <Button>Log In</Button>
-                    <Button>Registry</Button>
-                </ButtonGroup>
+                <Button className="login-btn">Log In</Button>
+                <Button className="register-btn">Registry</Button>
             </div>
-
-            
         </nav>
     );
 };

@@ -14,6 +14,15 @@ const RightNav = () => {
         setDate(new Date());
     }
 
+    function dateFormatter() {
+        let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
+            date
+        );
+        let mo = new Intl.DateTimeFormat("en", { month: "short" }).format(date);
+        let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(date);
+        return `${da}-${mo}-${ye}`;
+    }
+
     return (
         <div className="right-nav">
             <div
@@ -23,7 +32,7 @@ const RightNav = () => {
                 data-aos="fade-down"
                 data-aos-easing="ease-in"
             >
-                <div className="date">{date.toLocaleDateString()}</div>
+                <div className="date">{dateFormatter()}</div>
                 <div className="time">{date.toLocaleTimeString()}</div>
             </div>
         </div>

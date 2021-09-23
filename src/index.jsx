@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import "aos/dist/aos.css";
 import "./styles/styles.css";
-import "./styles/home-background.css";
 
 ReactDOM.render(
     <BrowserRouter>

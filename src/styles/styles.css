@@ -1,10 +1,12 @@
+/* GLOBAL START */
 :root {
-    --fontColor: #f1f1f1;
-    --citeColor: rgb(128, 128, 128);
+    --fontColor: #ffffff;
+    --citeColor: rgb(134, 134, 134);
+    --fontHoverColor: rgb(146, 145, 145);
 }
 
 * {
-    font-family: "Roboto", sans-serif;
+    font-family: "Julius Sans One", sans-serif !important;
 }
 
 html {
@@ -18,11 +20,11 @@ body {
     overflow-y: hidden;
     overflow-x: hidden;
 }
+/* GLOBAL END */
 
 /* HEADER START */
 .header {
-    background: white;
-    height: 100px;
+    background: transparent;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -36,13 +38,51 @@ body {
     padding-left: 40px;
 }
 
+.list-container .item {
+    color: var(--fontColor);
+}
+
+.list-container .item:hover {
+    background: transparent;
+    color: var(--fontHoverColor);
+    transition: 1s all;
+}
+
 .header .logo-container {
-    padding-left: 90px;
+    padding-right: 70px;
+}
+
+.logo-container .logo .logo-pic {
+    width: 210px;
+    height: 120px;
+    padding-top: 20px;
+    user-select: none;
 }
 
 .header .user-container {
     padding-right: 40px;
 }
+
+.user-container .login-btn {
+    color: var(--fontColor);
+}
+
+.user-container .login-btn:hover {
+    background: transparent;
+    color: rgb(23, 180, 36);
+    transition: 1s all;
+}
+
+.user-container .register-btn {
+    color: var(--fontColor);
+}
+
+.user-container .register-btn:hover {
+    background: transparent;
+    color: rgb(204, 19, 19);
+    transition: 1s all;
+}
+
 /* HEADER END */
 
 /* LEFT NAV START */
@@ -50,6 +90,7 @@ body {
     position: fixed;
     top: 44%;
     transition: 1s all;
+    z-index: 300;
 }
 
 .left-nav .social-container {
@@ -59,7 +100,7 @@ body {
 }
 
 .social-container .social-btn {
-    color: white;
+    color: var(--fontColor);
     padding: 5px;
     margin: 0 0 10px 0;
     transition: 1s all;
@@ -67,44 +108,92 @@ body {
 
 .social-container .social-btn:hover {
     background: transparent;
-    color: rgb(163, 163, 163);
+    color: var(--fontHoverColor);
     transition: 1s all;
 }
+
+.social-btn .social-icon {
+    font-size: 28px;
+}
+
 /* LEFT NAV END */
 
 /* RIGHT NAV START */
 .right-nav {
-    position: fixed;
-    display: flex;
-    right: -10px;
-    top: 48%;
+    right: 20px;
+    top: 32%;
+    position: absolute;
     transform: rotate(90deg);
+    z-index: 300;
+    transition: 1s all;
+    user-select: none;
 }
 
 .right-nav .date-container {
-    font-family: "Share Tech Mono", monospace;
+    position: fixed;
+    height: 100%;
+    width: 40vh;
     text-align: center;
-    color: #ffffff;
+    color: var(--fontColor);
+}
+
+.date-container .date {
+    letter-spacing: 0.12em;
+    font-size: 18px;
 }
 
 .date-container .time {
-    letter-spacing: 0.1em;
-    font-size: 22px;
-    padding: 5px 0;
-}
-.date-container .date {
-    letter-spacing: 0.1em;
-    font-size: 19px;
+    letter-spacing: 0.12em;
+    font-size: 24px;
+    margin-top: 10px;
 }
 /* RIGHT NAV END */
 
 /* HOME START */
-.home .main-content {
+.home .home-background {
     position: absolute;
+    user-select: none;
+}
+
+.home .home-background img {
+    width: 100%;
+    height: 100vh;
+}
+
+.home-background .slider {
+    animation: home-slider 10s ease-in-out infinite alternate;
+    background-image: linear-gradient(
+        -60deg,
+        rgb(0, 0, 0) 50%,
+        rgb(27, 27, 27) 50%
+    );
+    bottom: 0;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: 10;
+}
+
+.home-background .slider-1 {
+    animation-direction: alternate-reverse;
+    animation-duration: 9s;
+    opacity: 0.2;
+}
+
+.home-background .slider-2 {
+    animation-duration: 9s;
+    opacity: 0.2;
+}
+
+.home .main-content {
+    position: fixed;
     top: 48%;
-    left: 22.5%;
+    left: 21%;
     text-align: center;
     overflow: hidden;
+    user-select: none;
     color: var(--fontColor);
 }
 
@@ -113,7 +202,7 @@ body {
     letter-spacing: 10px;
     margin: 10px;
     padding: 30px 100px;
-    border: 1px solid white;
+    border: 1px solid var(--citeColor);
     text-transform: uppercase;
 }
 
@@ -131,3 +220,12 @@ body {
     color: var(--citeColor);
 }
 /* HOME END */
+
+@keyframes home-slider {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
