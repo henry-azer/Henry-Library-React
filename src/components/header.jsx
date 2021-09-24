@@ -29,7 +29,6 @@ const header = () => {
                 <div to="/" className="logo">
                     <img
                         src={Logo}
-                        draggable="false"
                         alt="henry library"
                         className="logo-pic"
                     />

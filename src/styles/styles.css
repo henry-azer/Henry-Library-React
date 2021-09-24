@@ -3,6 +3,8 @@
     --fontColor: #ffffff;
     --citeColor: rgb(134, 134, 134);
     --fontHoverColor: rgb(146, 145, 145);
+    --backgroundColor: #131316;
+    --logoColor: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -11,7 +13,7 @@
 
 html {
     height: 100vh;
-    background: #131316;
+    background: var(--backgroundColor);
     scroll-behavior: smooth;
 }
 
@@ -21,6 +23,123 @@ body {
     overflow-x: hidden;
 }
 /* GLOBAL END */
+
+/* LOADER START */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColor);
+    min-width: auto;
+    height: 100vh;
+    margin: auto;
+}
+
+.loader-container .loader-logo {
+    position: absolute;
+    width: 210px;
+    height: 120px;
+    padding-bottom: 50px;
+}
+.loader-container .loading-bar {
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    margin-top: 140px;
+    margin-left: 15px;
+}
+
+.loader-container .loading-bar:after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    content: "LOADING ...";
+    color: var(--logoColor);
+    background-color: var(--backgroundColor);
+    z-index: 1;
+}
+
+.loader-container .loading-bar:before {
+    top: -5px;
+    left: 0;
+    height: 30px;
+    width: 0;
+    opacity: 1;
+    content: "";
+    position: absolute;
+    background-color: var(--logoColor);
+    transform-origin: 100% 0%;
+    animation: loading-animation 12s ease-in-out infinite;
+    z-index: 0;
+}
+
+.loader-container .lines-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.lines-container .line-animation {
+    height: 2px;
+    width: 10px;
+    bottom: 150px;
+    position: absolute;
+    background-color: var(--fontColor);
+    animation: lines-animation ease-in-out infinite;
+    offset-path: path("M50,0 A50,50 0 1,1 70,250 A50,50 0 1,1 50,0");
+}
+
+.lines-container .line-1 {
+    animation-duration: 4s;
+}
+
+.lines-container .line-2 {
+    animation-duration: 4s;
+    animation-delay: 0.3s;
+}
+
+.lines-container .line-3 {
+    animation-duration: 4s;
+    animation-delay: 0.6s;
+}
+
+.lines-container .line-4 {
+    animation-duration: 4s;
+    animation-delay: 0.9s;
+}
+
+.lines-container .line-5 {
+    animation-duration: 4s;
+    animation-delay: 1.2s;
+}
+
+.lines-container .line-6 {
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+}
+
+.lines-container .line-7 {
+    animation-duration: 4s;
+    animation-delay: 1.8s;
+}
+
+.lines-container .line-8 {
+    animation-duration: 4s;
+    animation-delay: 2.1s;
+}
+
+.lines-container .line-9 {
+    animation-duration: 4s;
+    animation-delay: 2.4s;
+}
+
+/* LOADER END */
 
 /* HEADER START */
 .header {
@@ -50,13 +169,13 @@ body {
 
 .header .logo-container {
     padding-right: 70px;
+    user-select: none;
 }
 
 .logo-container .logo .logo-pic {
     width: 210px;
     height: 120px;
     padding-top: 20px;
-    user-select: none;
 }
 
 .header .user-container {
@@ -79,7 +198,7 @@ body {
 
 .user-container .register-btn:hover {
     background: transparent;
-    color: rgb(204, 19, 19);
+    color: rgb(247, 67, 67);
     transition: 1s all;
 }
 
@@ -151,40 +270,21 @@ body {
 
 /* HOME START */
 .home .home-background {
-    position: absolute;
-    user-select: none;
-}
-
-.home .home-background img {
-    width: 100%;
     height: 100vh;
+    position: relative;
+    background-image: url("https://images.pexels.com/photos/877971/pexels-photo-877971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.home-background .slider {
-    animation: home-slider 10s ease-in-out infinite alternate;
-    background-image: linear-gradient(
-        -60deg,
-        rgb(0, 0, 0) 50%,
-        rgb(27, 27, 27) 50%
-    );
-    bottom: 0;
-    left: -50%;
+.home .home-background::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
     opacity: 0.3;
-    position: fixed;
-    right: -50%;
-    top: 0;
-    z-index: 10;
-}
-
-.home-background .slider-1 {
-    animation-direction: alternate-reverse;
-    animation-duration: 9s;
-    opacity: 0.2;
-}
-
-.home-background .slider-2 {
-    animation-duration: 9s;
-    opacity: 0.2;
 }
 
 .home .main-content {
@@ -221,11 +321,30 @@ body {
 }
 /* HOME END */
 
-@keyframes home-slider {
+@keyframes loading-animation {
     0% {
-        transform: translateX(-25%);
+        width: 0px;
+    }
+    70% {
+        width: 100%;
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+        width: 100%;
     }
     100% {
-        transform: translateX(25%);
+        opacity: 0;
+        width: 0px;
+    }
+}
+
+@keyframes lines-animation {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
     }
 }
