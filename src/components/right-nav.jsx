@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const RightNav = () => {
+import { Parallax } from "react-scroll-parallax";
+
+const RightNav = (props) => {
     const [date, setDate] = useState(new Date());
 
     useEffect(() => {
@@ -23,17 +25,21 @@ const RightNav = () => {
         return `${da}-${mo}-${ye}`;
     }
 
+    const opacity = props.fadeOut;
+
     return (
-        <div className="right-nav">
+        <div className="right-nav" style={{ opacity }}>
             <div
                 className="date-container"
                 data-aos-duration="2000"
                 data-aos-delay="100"
-                data-aos="fade-down"
+                data-aos="fade-down-right"
                 data-aos-easing="ease-in"
             >
-                <div className="date">{dateFormatter()}</div>
-                <div className="time">{date.toLocaleTimeString()}</div>
+                <Parallax x={[0, -60]}>
+                    <div className="date">{dateFormatter()}</div>
+                    <div className="time">{date.toLocaleTimeString()}</div>
+                </Parallax>
             </div>
         </div>
     );
