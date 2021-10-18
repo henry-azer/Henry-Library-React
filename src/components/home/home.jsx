@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import { Parallax } from "react-scroll-parallax";
-
 import AOS from "aos";
 
 import Loader from "../loader";
 import MainSection from "./main-section";
+import BookSection from "./book-section";
 
 const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -14,31 +13,55 @@ const Home = () => {
     useEffect(() => {
         AOS.init();
 
+        // preventScrolling();
+
         setTimeout(() => {
             setIsLoaded(true);
         }, loadTimeout);
     });
+
+    // function preventScrolling() {
+    //     var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+    //     function preventDefault(e) {
+    //         e.preventDefault();
+    //     }
+
+    //     function preventDefaultForScrollKeys(e) {
+    //         if (keys[e.keyCode]) {
+    //             preventDefault(e);
+    //             return false;
+    //         }
+    //     }
+
+    //     var supportsPassive = false;
+    //     try {
+    //         window.addEventListener(
+    //             "test",
+    //             null,
+    //             Object.defineProperty({}, "passive", {
+    //                 get: function () {
+    //                     return (supportsPassive = true);
+    //                 },
+    //             })
+    //         );
+    //     } catch (e) {}
+
+    //     var wheelOpt = supportsPassive ? { passive: false } : false;
+    //     var wheelEvent =
+    //         "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+
+    //     window.addEventListener(wheelEvent, preventDefault, wheelOpt);
+    //     window.addEventListener("DOMMouseScroll", preventDefault, false);
+    //     window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+    // }
 
     return (
         <div className="home">
             <Loader loaderTimeout={loadTimeout} />
             {isLoaded && <MainSection />}
 
-            <Parallax y={[0, -78]}>
-                <section className="books-section">
-                    <div className="books-content">
-                        <h1>Every thing u want: </h1>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Odit quibusdam et, est minus porro saepe rerum
-                            voluptatum pariatur. Culpa officia doloremque
-                            inventore. Mollitia sit non rem animi doloribus
-                            illum adipisci!
-                        </p>
-                    </div>
-                    <div className="books-cards"></div>
-                </section>
-            </Parallax>
+            <BookSection />
         </div>
     );
 };
