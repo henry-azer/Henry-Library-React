@@ -23,7 +23,7 @@ function MainSection() {
     });
 
     function scrollHandler() {
-        window.scrollTo({ top: 530, left: 0, behavior: "smooth" });
+        window.scrollTo({ top: 900, left: 0, behavior: "smooth" });
     }
 
     return (
@@ -34,7 +34,7 @@ function MainSection() {
 
             <RightNav fadeOut={opacity} />
 
-            <Parallax y={[50, -50]}>
+            <Parallax y={[20, -20]}>
                 <div className="home-background"></div>
             </Parallax>
 
