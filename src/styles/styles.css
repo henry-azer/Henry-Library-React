@@ -1,6 +1,7 @@
 /* GLOBAL START */
 :root {
     --fontColor: #ffffff;
+    --fontSecondColor: #acacac;
     --citeColor: rgb(184, 178, 178);
     --fontHoverColor: rgb(146, 145, 145);
     --backgroundColor: rgba(39, 20, 20, 0.97);
@@ -56,7 +57,8 @@ button,
 .book-card .text,
 .books-content p,
 .card-header .date,
-.card-header .date span {
+.card-header .date span,
+.tutorial-document .reading-rule p {
     font-family: "Raleway", sans-serif !important;
 }
 /* FONTS END */
@@ -277,7 +279,7 @@ button,
 
 .header .logo-container,
 .header-toggle .logo-container {
-    padding-right: 70px;
+    padding-right: 150px;
     cursor: pointer;
 }
 
@@ -456,21 +458,142 @@ button,
 
 /* HOME END */
 
+/* TUTORIAL START */
+.tutorial-section {
+    height: 110vh;
+    background-color: transparent;
+}
+
+.tutorial-section .tutorial-h1 {
+    position: relative;
+    top: -50px;
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--fontColor);
+    font-weight: 100;
+    font-size: 28px;
+}
+
+.tutorial-section .tutorial-wrapper {
+    float: left;
+}
+
+.tutorial-wrapper .tutorial-video {
+    position: absolute;
+    padding-top: 35px;
+    left: 5%;
+    width: 46%;
+}
+
+.tutorial-video .tablet-frame {
+    position: absolute;
+    left: -3%;
+    top: 6%;
+    width: 95%;
+    height: 95%;
+    z-index: 60;
+}
+
+.tutorial-video .reading-video {
+    width: 90%;
+    z-index: 50;
+}
+
+.tutorial-video .play-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 13%;
+    font-size: 35px;
+    color: var(--fontColor);
+    z-index: 60;
+}
+
+.tutorial-wrapper .tutorial-document {
+    position: absolute;
+    right: 5%;
+    width: 45%;
+    margin-top: 12px;
+}
+
+.tutorial-document .reading-rule {
+    margin-bottom: 40px;
+}
+
+.tutorial-document .reading-rule h1 {
+    color: var(--fontColor);
+    margin-bottom: 5px;
+    font-weight: 100;
+}
+
+.tutorial-document .reading-rule p {
+    color: var(--fontSecondColor);
+    margin-top: 0;
+}
+
+.tutorial-section .full-tutorial {
+    position: relative;
+    display: flex;
+    top: 430px;
+    left: 30%;
+    text-align: center;
+}
+
+.full-tutorial .watch-button {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--fontColor);
+    font-size: 30px;
+    transition: 0.5s all;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.full-tutorial:hover .watch-button {
+    background-color: black;
+    color: var(--fontColor);
+}
+
+.full-tutorial h1 {
+    font-size: 40px;
+    color: var(--fontColor);
+    cursor: pointer;
+}
+
+.full-tutorial h1::after {
+    content: "";
+    height: 3px;
+    background-color: var(--fontSecondColor);
+    width: 0;
+    display: block;
+    transition: 0.4s;
+}
+
+.full-tutorial:hover h1::after {
+    width: 102%;
+}
+
+.popup-tutorial .modal-video-close-btn {
+    outline: none;
+    cursor: pointer;
+    right: -100px;
+    top: -50px;
+}
+
+.popup-tutorial .modal-video {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.popup-tutorial .modal-video-body {
+    max-width: 1100px;
+}
+/* TUTORIAL END */
+
 /* BOOKS START */
 .books-section {
     height: 110vh;
     position: relative;
-    background-color: transparent;
     z-index: 20;
-}
-
-.books-section .book-h1 {
-    position: relative;
-    top: -50px;
-    margin-top: 30px;
-    text-align: center;
-    color: var(--fontColor);
-    font-weight: 100;
 }
 
 .books-section .books-background {
@@ -571,8 +694,8 @@ button,
 }
 
 .card-header .menu-content .menu-icon:hover {
-    color: var(--fontHoverColor);   
-    transition: .6s all;
+    color: var(--fontHoverColor);
+    transition: 0.6s all;
 }
 
 .card-header .date {

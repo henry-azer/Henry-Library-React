@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 
 import Loader from "../loader";
-import MainSection from "./main-section";
+import HomeSection from "./home-section";
+import TutorialSection from "./tutorial-section";
 import BookSection from "./book-section";
 
 const Home = () => {
@@ -21,8 +22,8 @@ const Home = () => {
     return (
         <div className="home">
             <Loader loaderTimeout={loadTimeout} />
-            {isLoaded && <MainSection />}
-
+            {isLoaded && <HomeSection />}
+            <TutorialSection />
             <BookSection />
         </div>
     );

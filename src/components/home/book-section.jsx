@@ -8,18 +8,13 @@ import BookSectionBg from "../..//resources/background/reader-background.png";
 function BookSection() {
     return (
         <section className="books-section">
-            <h1
-                className="book-h1"
-                data-aos-delay="10"
-                data-aos-duration="1000"
-                data-aos="fade-up"
-            >
-                Be ready. to the journey!
-            </h1>
             <img
                 src={BookSectionBg}
                 className="books-background"
                 alt="reader-background"
+                data-aos-delay="100"
+                data-aos-duration="2000"
+                data-aos="fade-up"
             />
             <div
                 className="books-content"
