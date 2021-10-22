@@ -21,12 +21,13 @@
 }
 
 html {
-    background: var(--backgroundColor);
     scroll-behavior: smooth;
 }
 
 body {
+    background: var(--backgroundColor);
     margin: 0px;
+    transition: 1s all;
 }
 
 a,
@@ -460,7 +461,7 @@ button,
 
 /* TUTORIAL START */
 .tutorial-section {
-    height: 110vh;
+    height: 80vh;
     background-color: transparent;
 }
 
@@ -588,6 +589,204 @@ button,
     max-width: 1100px;
 }
 /* TUTORIAL END */
+
+/* READING START */
+.reading-section {
+    height: 130vh;
+    position: relative;
+    z-index: 20;
+}
+
+.reading-section .moving-text {
+    margin-top: 1em;
+    overflow: hidden;
+    position: relative;
+    min-height: 3.5em;
+    font-size: 70px;
+    color: var(--fontColor);
+}
+
+.moving-text .marquee-text-1 {
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.moving-text .marquee-text-2 {
+    user-select: none;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    text-transform: uppercase;
+}
+
+.reading-section .reading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reading-wrapper .reading-banner {
+    width: 48%;
+    z-index: 50;
+}
+
+.reading-banner .reading-img {
+    position: relative;
+    overflow: hidden;
+    margin: 7px;
+    padding: 6px;
+    min-width: 230px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: none !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+}
+
+.reading-img img {
+    max-width: 100%;
+    vertical-align: top;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.reading-img .border {
+    position: absolute;
+    opacity: 0.45;
+}
+
+.reading-img .border:before,
+.reading-img .border:after,
+.reading-img .border div:before,
+.reading-img .border div:after {
+    background-color: #f5b043;
+    position: absolute;
+    content: "";
+    display: block;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.reading-img .border:before,
+.reading-img .border:after {
+    width: 0;
+    height: 1px;
+}
+
+.reading-img .border div:before,
+.reading-img .border div:after {
+    width: 1px;
+    height: 0;
+}
+
+.reading-img .border.one {
+    left: 0;
+    top: 0;
+    right: 12px;
+    bottom: 12px;
+}
+
+.reading-img .border.one:before,
+.reading-img .border.one div:before {
+    left: 0;
+    top: 0;
+}
+
+.reading-img .border.one:after,
+.reading-img .border.one div:after {
+    bottom: 0;
+    right: 0;
+}
+
+.reading-img .border.two {
+    left: 12px;
+    top: 12px;
+    right: 0;
+    bottom: 0;
+}
+
+.reading-img .border.two:before,
+.reading-img .border.two div:before {
+    right: 0;
+    top: 0;
+}
+
+.reading-img .border.two:after,
+.reading-img .border.two div:after {
+    bottom: 0;
+    left: 0;
+}
+
+.reading-img a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.reading-img:hover .border:before,
+.reading-img.hover .border:before,
+.reading-img:hover .border:after,
+.reading-img.hover .border:after {
+    width: 100%;
+}
+
+.reading-img:hover .border div:before,
+.reading-img.hover .border div:before,
+.reading-img:hover .border div:after,
+.reading-img.hover .border div:after {
+    height: 100%;
+}
+
+.reading-wrapper .reading-text {
+    position: absolute;
+    margin: 150px 0 0 500px;
+    width: 35%;
+    z-index: 60;
+    color: var(--fontColor);
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: bold;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.reading-text .text-flip {
+    height: 80px;
+    overflow: hidden;
+}
+
+.reading-text .text-flip > div > div {
+    color: var(--fontColor);
+    padding: 4px 12px;
+    height: 80px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.reading-text .text-flip div:first-child {
+    animation: text-flip-animation 5s linear infinite;
+}
+
+.reading-text .text-flip div div {
+    background: #42c58a;
+}
+
+.reading-text .text-flip div:first-child div {
+    background: #439cbd;
+}
+
+.reading-text .text-flip div:last-child div {
+    background: #dc143c;
+}
+/* READING END */
 
 /* BOOKS START */
 .books-section {
@@ -809,6 +1008,33 @@ button,
     }
     60% {
         transform: translateY(-15px);
+    }
+}
+
+@keyframes text-flip-animation {
+    0% {
+        margin-top: -270px;
+    }
+    5% {
+        margin-top: -180px;
+    }
+    33% {
+        margin-top: -180px;
+    }
+    38% {
+        margin-top: -90px;
+    }
+    66% {
+        margin-top: -90px;
+    }
+    71% {
+        margin-top: 0px;
+    }
+    99.99% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: -270px;
     }
 }
 /* ANIMATIONS END */

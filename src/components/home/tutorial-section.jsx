@@ -114,7 +114,6 @@ function TutorialSection() {
             </div>
             <div className="popup-tutorial">
                 <ModalVideo
-                    autoplay
                     channel="youtube"
                     isOpen={isModalVideoOpen}
                     videoId="ndbXgQFhfn8"

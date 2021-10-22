@@ -5,6 +5,7 @@ import AOS from "aos";
 import Loader from "../loader";
 import HomeSection from "./home-section";
 import TutorialSection from "./tutorial-section";
+import ReadingSection from "./reading-section";
 import BookSection from "./book-section";
 
 const Home = () => {
@@ -17,6 +18,14 @@ const Home = () => {
         setTimeout(() => {
             setIsLoaded(true);
         }, loadTimeout);
+
+        document.addEventListener("scroll", () => {
+            if (window.scrollY > 1000 && window.scrollY < 2200) {
+                document.body.style.backgroundColor = "black";
+            } else {
+                document.body.style.backgroundColor = "rgba(39, 20, 20, 0.97)";
+            }
+        });
     });
 
     return (
@@ -24,6 +33,7 @@ const Home = () => {
             <Loader loaderTimeout={loadTimeout} />
             {isLoaded && <HomeSection />}
             <TutorialSection />
+            <ReadingSection />
             <BookSection />
         </div>
     );
