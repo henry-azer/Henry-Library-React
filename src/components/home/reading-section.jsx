@@ -7,7 +7,7 @@ function ReadingSection() {
         <section className="reading-section">
             <div
                 className="moving-text"
-                data-aos-delay="70"
+                data-aos-delay="100"
                 data-aos-duration="2000"
                 data-aos="fade-up"
             >
@@ -29,7 +29,7 @@ function ReadingSection() {
             <div className="reading-wrapper">
                 <div
                     className="reading-banner"
-                    data-aos-delay="80"
+                    data-aos-delay="150"
                     data-aos-duration="1500"
                     data-aos="fade-up-right"
                 >
@@ -48,25 +48,25 @@ function ReadingSection() {
                 </div>
                 <div
                     className="reading-text"
-                    data-aos-delay="80"
-                    data-aos-duration="1000"
+                    data-aos-delay="200"
+                    data-aos-duration="2000"
                     data-aos="fade-right"
                 >
-                        <span>Reading Makes</span>
-                        <div className="text-flip">
-                            <div>
-                                <div>Work</div>
-                            </div>
-                            <div>
-                                <div>Daily Life</div>
-                            </div>
-                            <div>
-                                <div>Everything</div>
-                            </div>
+                    <span>Reading Makes</span>
+                    <div className="text-flip">
+                        <div>
+                            <div>Work</div>
                         </div>
-                        AweSoMe!
+                        <div>
+                            <div>Daily Life</div>
+                        </div>
+                        <div>
+                            <div>Everything</div>
+                        </div>
                     </div>
+                    AweSoMe!
                 </div>
+            </div>
         </section>
     );
 }

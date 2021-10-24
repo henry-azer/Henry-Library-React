@@ -13,7 +13,7 @@ function BookSection() {
                 className="books-background"
                 alt="reader-background"
                 data-aos-delay="100"
-                data-aos-duration="2000"
+                data-aos-duration="1000"
                 data-aos="fade-up"
             />
             <div
