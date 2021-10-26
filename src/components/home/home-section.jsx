@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import Header from "../header";
-import LeftNav from "../left-nav";
-import RightNav from "../right-nav";
+import LeftNav from "./left-nav";
+import RightNav from "./right-nav";
 
 import { Parallax } from "react-scroll-parallax";
 
@@ -23,7 +23,7 @@ function HomeSection() {
     });
 
     function scrollHandler() {
-        window.scrollTo({ top: 650, left: 0, behavior: "smooth" });
+        window.scrollTo({ top: 670, left: 0, behavior: "smooth" });
     }
 
     return (

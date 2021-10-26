@@ -52,9 +52,8 @@ const Header = () => {
                 data-aos="fade-down-right"
                 data-aos-easing="ease-in"
             >
-                <Button className="item">Feed</Button>
                 <Button className="item">Books</Button>
-                <Button className="item">Writers</Button>
+                <Button className="item">Authors</Button>
                 <Button className="item">About us</Button>
             </div>
 

@@ -3,16 +3,16 @@ import React from "react";
 function ServicesSection() {
     return (
         <section className="services-section">
-            <div className="services-wrapper">
-                <div class="title">
+            <div className="services-background">
+                <div className="services-title">
                     <h1>Full Services</h1>
                 </div>
-                <div className="services">
+                <div className="services-cards">
                     <figure
                         className="service-card"
                         data-aos-delay="50"
                         data-aos-duration="1000"
-                        data-aos="fade-up"
+                        data-aos="slide-up"
                     >
                         <img
                             src="https://images.pexels.com/photos/6601770/pexels-photo-6601770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -32,7 +32,7 @@ function ServicesSection() {
                         className="service-card"
                         data-aos-delay="100"
                         data-aos-duration="1000"
-                        data-aos="fade-up"
+                        data-aos="slide-up"
                     >
                         <img
                             src="https://images.pexels.com/photos/3471028/pexels-photo-3471028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
@@ -52,7 +52,7 @@ function ServicesSection() {
                         className="service-card"
                         data-aos-delay="150"
                         data-aos-duration="1000"
-                        data-aos="fade-up"
+                        data-aos="slide-up"
                     >
                         <img
                             src="https://images.pexels.com/photos/1848924/pexels-photo-1848924.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
