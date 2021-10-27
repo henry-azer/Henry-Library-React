@@ -8,6 +8,7 @@
     --headerColor: rgba(37, 15, 15, 0.8);
     --logoColor: rgba(255, 255, 255, 0.7);
     --borderColor: #7a571f;
+    --iconColor: #9c7029;
 }
 
 ::-webkit-scrollbar {
@@ -66,7 +67,7 @@ button,
 }
 /* FONTS END */
 
-/* HEADER START */
+/* TITLE HEADING START */
 .header-wrapper {
     display: block;
     margin: 0 auto 50px auto;
@@ -91,8 +92,47 @@ button,
     font-weight: 100;
     font-size: 16px;
 }
+/* TITLE HEADING END */
 
-/* HEADER END */
+/* CONTACT START */
+.contact {
+    height: 35vh;
+    padding: 20px 0;
+    background-color: var(--backgroundColor);
+    border-top: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColor);
+}
+
+.contact .social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    position: relative;
+    margin: 0 45px;
+}
+
+.social-icons .social-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 48px;
+    transition: 0.5s all;
+    color: var(--fontColor);
+    cursor: pointer;
+}
+
+.social-icons .social-icon:hover {
+    color: var(--iconColor);
+    transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transition: 0.5s all;
+}
+/* CONTACT END */
 
 /* BUTTONS START */
 .button-wrapper {
@@ -154,6 +194,7 @@ button,
     min-width: auto;
     height: 100vh;
     margin: auto;
+    overflow: hidden;
 }
 
 .loader-container .loader-logo {
@@ -259,7 +300,6 @@ button,
     animation-duration: 4s;
     animation-delay: 2.4s;
 }
-
 /* LOADER END */
 
 /* HEADER START */
@@ -342,73 +382,16 @@ button,
     color: rgb(247, 67, 67);
     transition: 1s all;
 }
-
 /* HEADER END */
 
-/* LEFT NAV START */
-.left-nav {
-    position: absolute;
-    top: 380px;
-    transition: 0.5s all;
-    z-index: 10;
+/* FOOTER START */
+.footer-section {
+    height: 80vh;
 }
+/* FOOTER END */
+/* ------ GLOBAL END ------ */
 
-.left-nav .social-container {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-}
-
-.social-container .social-btn {
-    color: var(--fontColor);
-    padding: 5px;
-    margin: 0 0 10px 0;
-    transition: 1s all;
-}
-
-.social-container .social-btn:hover {
-    background: transparent;
-    color: var(--fontHoverColor);
-    transition: 1s all;
-}
-
-.social-btn .social-icon {
-    font-size: 28px;
-}
-
-/* LEFT NAV END */
-
-/* RIGHT NAV START */
-.right-nav {
-    right: 20px;
-    top: 320px;
-    position: absolute;
-    transform: rotate(90deg);
-    z-index: 10;
-    transition: 0.5s all;
-    user-select: none;
-}
-
-.right-nav .date-container {
-    position: fixed;
-    height: 100%;
-    width: 40vh;
-    text-align: center;
-    color: var(--fontColor);
-}
-
-.date-container .date {
-    letter-spacing: 0.12em;
-    font-size: 18px;
-}
-
-.date-container .time {
-    letter-spacing: 0.12em;
-    font-size: 24px;
-    margin-top: 10px;
-}
-/* RIGHT NAV END */
-
+/* ------ HOME ROUTE START ------ */
 /* HOME START */
 .home-section .home-background {
     height: 100vh;
@@ -475,6 +458,68 @@ button,
     animation: chevronDown-animation 3s infinite;
 }
 
+/* LEFT NAV START */
+.home-section .left-nav {
+    position: absolute;
+    top: 380px;
+    transition: 0.5s all;
+    z-index: 10;
+}
+
+.left-nav .social-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.social-container .social-btn {
+    color: var(--fontColor);
+    padding: 5px;
+    margin: 0 0 10px 0;
+    transition: 1s all;
+}
+
+.social-container .social-btn:hover {
+    background: transparent;
+    color: var(--fontHoverColor);
+    transition: 1s all;
+}
+
+.social-btn .social-icon {
+    font-size: 28px;
+}
+/* LEFT NAV END */
+
+/* RIGHT NAV START */
+.home-section .right-nav {
+    right: 20px;
+    top: 320px;
+    position: absolute;
+    transform: rotate(90deg);
+    z-index: 10;
+    transition: 0.5s all;
+    user-select: none;
+}
+
+.right-nav .date-container {
+    position: fixed;
+    height: 100%;
+    width: 40vh;
+    text-align: center;
+    color: var(--fontColor);
+}
+
+.date-container .date {
+    letter-spacing: 0.12em;
+    font-size: 18px;
+}
+
+.date-container .time {
+    letter-spacing: 0.12em;
+    font-size: 24px;
+    margin-top: 10px;
+}
+/* RIGHT NAV END */
 /* HOME END */
 
 /* TUTORIAL START */
@@ -572,6 +617,9 @@ button,
 .full-tutorial:hover .watch-button {
     background-color: black;
     color: var(--fontColor);
+    transform: scale(1.2);  
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 
 .full-tutorial h1 {
@@ -1222,6 +1270,7 @@ button,
     opacity: 0.9;
 }
 /* AUTHORS END */
+/* ------ HOME ROUTE END ------ */
 
 /* ANIMATIONS START */
 @keyframes loading-animation {

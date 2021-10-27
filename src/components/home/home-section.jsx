@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-import Header from "../header";
-import LeftNav from "./left-nav";
-import RightNav from "./right-nav";
-
 import { Parallax } from "react-scroll-parallax";
 
 import { BsChevronDown } from "react-icons/bs";
 
+import Button from "@mui/material/Button";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+
 function HomeSection() {
+    const [date, setDate] = useState(new Date());
     const [currentScrollY, setCurrentScrollY] = useState(window.scrollY);
 
     const opacity = Math.min(12 / currentScrollY, 1);
@@ -20,23 +22,71 @@ function HomeSection() {
                 setCurrentScrollY(newScrollY);
             }
         };
+
+        var timerID = setInterval(() => tick(), 1000);
+        return function cleanup() {
+            clearInterval(timerID);
+        };
     });
 
     function scrollHandler() {
         window.scrollTo({ top: 670, left: 0, behavior: "smooth" });
     }
 
+    function tick() {
+        setDate(new Date());
+    }
+
+    function dateFormatter() {
+        let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(
+            date
+        );
+        let mo = new Intl.DateTimeFormat("en", { month: "short" }).format(date);
+        let da = new Intl.DateTimeFormat("en", { day: "2-digit" }).format(date);
+        return `${da}-${mo}-${ye}`;
+    }
+
     return (
         <section className="home-section">
-            <Header />
-
-            <LeftNav fadeOut={opacity} />
-
-            <RightNav fadeOut={opacity} />
-
             <Parallax y={[30, -30]}>
                 <div className="home-background"></div>
             </Parallax>
+            <div className="left-nav" style={{ opacity }}>
+                <Parallax y={[0, -150]}>
+                    <div
+                        className="social-container"
+                        data-aos-delay="100"
+                        data-aos-duration="2000"
+                        data-aos="fade-down-right"
+                        data-aos-easing="ease-in"
+                    >
+                        <Button className="social-btn">
+                            <GitHubIcon className="social-icon" />
+                        </Button>
+                        <Button className="social-btn">
+                            <LinkedInIcon className="social-icon" />
+                        </Button>
+                        <Button className="social-btn">
+                            <FacebookIcon className="social-icon" />
+                        </Button>
+                    </div>
+                </Parallax>
+            </div>
+
+            <div className="right-nav" style={{ opacity }}>
+                <div
+                    className="date-container"
+                    data-aos-duration="2000"
+                    data-aos-delay="100"
+                    data-aos="fade-down-right"
+                    data-aos-easing="ease-in"
+                >
+                    <Parallax x={[0, -60]}>
+                        <div className="date">{dateFormatter()}</div>
+                        <div className="time">{date.toLocaleTimeString()}</div>
+                    </Parallax>
+                </div>
+            </div>
 
             <div
                 className="main-content"

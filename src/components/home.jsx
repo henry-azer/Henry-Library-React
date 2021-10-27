@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 
 import Loader from "./loader";
+import Header from "./header";
+import Footer from "./footer";
+import ContactUs from "./contact";
+
 import HomeSection from "./home/home-section";
 import TutorialSection from "./home/tutorial-section";
 import ReadingSection from "./home/reading-section";
@@ -12,7 +16,7 @@ import AuthorsSection from "./home/authors-section";
 
 const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
-    const [loadTimeout] = useState(12);
+    const [loadTimeout] = useState(12000);
 
     useEffect(() => {
         AOS.init();
@@ -33,12 +37,15 @@ const Home = () => {
     return (
         <div className="home">
             <Loader loaderTimeout={loadTimeout} />
+            <Header />
             {isLoaded && <HomeSection />}
             <TutorialSection />
             <ReadingSection />
             <ServicesSection />
             <BooksSection />
             <AuthorsSection />
+            <ContactUs />
+            <Footer />
         </div>
     );
 };
