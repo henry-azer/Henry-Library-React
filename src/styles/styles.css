@@ -28,7 +28,6 @@ html {
 }
 
 body {
-
     margin: 0;
     transition: 1s all;
 }
@@ -272,7 +271,7 @@ button,
     position: fixed;
     height: 130px;
     width: 100%;
-    z-index: 900;
+    z-index: 100;
 }
 
 .header-toggle {
@@ -352,7 +351,7 @@ button,
     width: 50px;
     height: 50px;
     right: -35px;
-    bottom: 35px;
+    bottom: 30px;
     opacity: 0;
     cursor: pointer;
     background: var(--backgroundColor);
@@ -654,45 +653,51 @@ button,
     z-index: 20;
 }
 
-.tutorial-section .tutorial-h1 {
+.tutorial-section .tutorial-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tutorial-wrapper .tutorial-h1 {
     position: relative;
     top: -50px;
     margin-top: 30px;
     margin-bottom: 0;
+    font-size: 28px;
+    font-weight: 100;
     text-align: center;
     color: var(--fontColor);
-    font-weight: 100;
-    font-size: 28px;
 }
 
-.tutorial-section .tutorial-wrapper {
-    float: left;
+.tutorial-wrapper .tutorial-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
-.tutorial-wrapper .tutorial-video {
-    position: absolute;
-    padding-top: 35px;
-    left: 5%;
+.tutorial-info .tutorial-video {
     width: 46%;
 }
 
 .tutorial-video .tablet-frame {
     position: absolute;
     left: -3%;
-    top: 6%;
     width: 95%;
     height: 95%;
     z-index: 60;
 }
 
 .tutorial-video .reading-video {
+    position: absolute;
+    top: 15px;
     width: 90%;
     z-index: 50;
 }
 
 .tutorial-video .play-icon {
     position: absolute;
-    bottom: 20px;
+    bottom: 45px;
     right: 13%;
     font-size: 35px;
     color: var(--fontColor);
@@ -700,11 +705,8 @@ button,
     cursor: pointer;
 }
 
-.tutorial-wrapper .tutorial-document {
-    position: absolute;
-    right: 5%;
+.tutorial-info .tutorial-document {
     width: 45%;
-    margin-top: 12px;
 }
 
 .tutorial-document .reading-rule {
@@ -722,12 +724,11 @@ button,
     margin-top: 0;
 }
 
-.tutorial-section .full-tutorial {
-    position: relative;
+.tutorial-wrapper .full-tutorial {
     display: flex;
-    top: 450px;
-    left: 30%;
+    justify-content: center;
     text-align: center;
+    padding-top: 30px;
 }
 
 .full-tutorial .watch-button {
@@ -769,19 +770,30 @@ button,
     width: 102%;
 }
 
+.tutorial-wrapper .popup-tutorial {
+    z-index: 900;
+}
+
 .popup-tutorial .modal-video-close-btn {
     outline: none;
     cursor: pointer;
     right: -100px;
-    top: -50px;
 }
 
 .popup-tutorial .modal-video {
     background-color: rgba(0, 0, 0, 0.85);
+    z-index: 999;
 }
 
 .popup-tutorial .modal-video-body {
     max-width: 1100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: 40px;
+    left: 200px;
+
 }
 /* TUTORIAL END */
 
@@ -801,6 +813,7 @@ button,
     min-height: 3.5em;
     font-size: 70px;
     color: var(--fontColor);
+    z-index: 50;
 }
 
 .moving-text .marquee-text-1 {
