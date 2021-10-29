@@ -797,25 +797,23 @@ body {
 
 /* READING START */
 .reading-section {
-    height: 130vh;
-    position: relative;
+    height: 125vh;
+    margin-top: 120px;
     background-color: transparent;
     transition: 1s all;
     z-index: 20;
 }
 
 .reading-section .moving-text {
-    margin-top: 1em;
-    overflow: hidden;
     position: relative;
-    min-height: 3.5em;
+    margin: 80px auto;
     font-size: 70px;
     color: var(--fontColor);
     z-index: 50;
 }
 
 .moving-text .marquee-text-1 {
-    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    -webkit-text-stroke: 0.5px var(--fontColor);
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     font-weight: 100;
@@ -835,15 +833,13 @@ body {
 
 .reading-wrapper .reading-banner {
     width: 48%;
-    z-index: 50;
 }
 
 .reading-banner .reading-img {
     position: relative;
-    overflow: hidden;
     margin: 7px;
     padding: 6px;
-    min-width: 230px;
+    min-width: 250px;
     max-width: 450px;
     width: 100%;
     box-shadow: none !important;
@@ -879,12 +875,12 @@ body {
 .reading-img .border:before,
 .reading-img .border:after {
     width: 0;
-    height: 1px;
+    height: 1.5px;
 }
 
 .reading-img .border div:before,
 .reading-img .border div:after {
-    width: 1px;
+    width: 1.5px;
     height: 0;
 }
 

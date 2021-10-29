@@ -54,7 +54,7 @@ function ReadingSection() {
                 >
                     <span>Reading Makes</span>
                     <div className="text-flip">
-                        <div>
+                        <div> 
                             <div>Work</div>
                         </div>
                         <div>
