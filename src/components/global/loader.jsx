@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Logo from "..//resources/logo/light-logo.png";
+import Logo from "../..//resources/logo/light-logo.png";
 
 import ScrollLock from "react-scroll-lock-component";
 

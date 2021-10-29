@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import AOS from "aos";
 
-import Loader from "./loader";
-import Header from "./header";
-import Footer from "./footer";
-import ContactUs from "./contact";
-import BackToTop from "./back-to-top";
+import Loader from "./global/loader";
+import Header from "./global/header";
+import Footer from "./global/footer";
+import ContactUs from "./global/contact";
+import BackToTop from "./global/back-to-top";
 
 import HomeSection from "./home/home-section";
 import TutorialSection from "./home/tutorial-section";

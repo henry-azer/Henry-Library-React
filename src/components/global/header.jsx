@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Button from "@mui/material/Button";
 
-import Logo from "..//resources/logo/logo.png";
-import LightLogo from "..//resources/logo/light-logo.png";
+import Logo from "../..//resources/logo/logo.png";
+import LightLogo from "../..//resources/logo/light-logo.png";
+
 
 const Header = () => {
     const prevScrollY = useRef(0);
