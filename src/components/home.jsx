@@ -27,16 +27,7 @@ const Home = () => {
         }, loadTimeout);
 
         document.addEventListener("scroll", () => {
-            if (window.scrollY > 1000 && window.scrollY < 2600) {
-                document.body.style.backgroundColor = "#000";
-                document.getElementById("home").style.backgroundColor = "#000";
-            } else {
-                document.body.style.backgroundColor = "#2b1717";
-                document.getElementById("home").style.backgroundColor =
-                    "#2b1717";
-            }
-
-            if (window.scrollY > 4500) {
+            if (window.scrollY > 4600) {
                 document.getElementById("home").style.transition = "all 0s";
                 document.getElementById("home").style.backgroundColor = "#000";
                 document.getElementById("footer-scale").style.opacity = "1";
@@ -48,6 +39,8 @@ const Home = () => {
                     .classList.add("authors-scale");
             } else {
                 document.getElementById("home").style.transition = "all 1s";
+                document.getElementById("home").style.backgroundColor =
+                    "#2b1717";
                 document.getElementById("footer-scale").style.opacity = "0";
                 document
                     .getElementById("contact")
