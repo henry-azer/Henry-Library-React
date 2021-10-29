@@ -45,42 +45,41 @@ const Header = () => {
 
     return (
         <nav className={headerToggle}>
-            <div
-                className="list-container"
-                data-aos-delay="100"
-                data-aos-duration="2000"
-                data-aos="fade-down-right"
-                data-aos-easing="ease-in"
-            >
-                <Button className="item">Books</Button>
-                <Button className="item">Authors</Button>
-                <Button className="item">About us</Button>
-            </div>
-
-            <div
-                className="logo-container"
-                data-aos-delay="100"
-                data-aos-duration="2000"
-                data-aos="fade-down"
-                data-aos-easing="ease-in"
-            >
+            <div className="header-wrapper">
                 <div
-                    to="/"
-                    className="logo"
+                    className="list-container"
+                    data-aos-delay="100"
+                    data-aos-duration="2000"
+                    data-aos="fade-down-right"
+                    data-aos-easing="ease-in"
                 >
-                    <img src={headerLogo} alt="henry library"/>
+                    <Button className="item">Books</Button>
+                    <Button className="item">Authors</Button>
+                    <Button className="item">About us</Button>
                 </div>
-            </div>
 
-            <div
-                className="user-container"
-                data-aos-delay="100"
-                data-aos-duration="2000"
-                data-aos-easing="ease-in"
-                data-aos="fade-down-left"
-            >
-                <Button className="login-btn">Log In</Button>
-                <Button className="register-btn">Registry</Button>
+                <div
+                    className="logo-container"
+                    data-aos-delay="100"
+                    data-aos-duration="2000"
+                    data-aos="fade-down"
+                    data-aos-easing="ease-in"
+                >
+                    <div to="/" className="logo">
+                        <img src={headerLogo} alt="henry library" />
+                    </div>
+                </div>
+
+                <div
+                    className="user-container"
+                    data-aos-delay="100"
+                    data-aos-duration="2000"
+                    data-aos-easing="ease-in"
+                    data-aos="fade-down-left"
+                >
+                    <Button className="login-btn">Log In</Button>
+                    <Button className="register-btn">Registry</Button>
+                </div>
             </div>
         </nav>
     );

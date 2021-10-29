@@ -102,14 +102,14 @@ body {
 /* BUTTONS END */
 
 /* TITLE HEADING START */
-.header-wrapper {
+.title-heading-wrapper {
     display: block;
     margin: 0 auto 50px auto;
     width: 40%;
     transition: 1s all;
 }
 
-.header-wrapper h1 {
+.title-heading-wrapper h1 {
     color: var(--fontColor);
     text-align: center;
     font-weight: bold;
@@ -118,7 +118,7 @@ body {
     font-weight: 100;
 }
 
-.header-wrapper h3 {
+.title-heading-wrapper h3 {
     color: var(--fontSecondColor);
     text-align: center;
     padding: 12px 0px;
@@ -249,14 +249,20 @@ body {
 
 /* HEADER START */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s all;
     position: fixed;
     height: 130px;
     width: 100%;
     z-index: 100;
+}
+
+.header .header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    transition: 1s all;
 }
 
 .header-toggle {
@@ -265,14 +271,18 @@ body {
     transition: 1s all;
 }
 
-.header .list-container,
-.header-toggle .list-container {
-    padding-left: 40px;
+.header-toggle .header-wrapper {
+    top: 30px;
+    transition: 1s all;
+}
+
+.header-wrapper .list-container {
+    position: absolute;
+    left: 35px;
 }
 
 .list-container .item {
     color: var(--fontColor);
-    transition: 1s all;
 }
 
 .list-container .item:hover {
@@ -281,29 +291,32 @@ body {
     transition: 1s all;
 }
 
-.header .logo-container,
-.header-toggle .logo-container {
-    padding-right: 150px;
+.header-wrapper .logo-container {
+    margin-top: -30px;
     cursor: pointer;
+
 }
 
-.header .logo-container .logo img {
+.header-toggle .logo-container {
+    margin-top: -20px;
+}
+
+.header-wrapper .logo-container .logo img {
     width: 210px;
     height: 120px;
-    padding-top: 20px;
-    transition: 0.5s all;
+    transition: 1s all;
 }
 
 .header-toggle .logo-container .logo img {
-    width: 160px;
+    width: 150px;
     height: 90px;
-    padding-top: 10px;
-    transition: 0.5s all;
+    transition: 1s all;
 }
 
-.header .user-container,
+.header-wrapper .user-container,
 .header-toggle .user-container {
-    padding-right: 40px;
+    position: absolute;
+    right: 35px;
 }
 
 .user-container .login-btn {

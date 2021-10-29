@@ -11,7 +11,7 @@ function ContactUs() {
     return (
         <section id="contact" className="contact">
             <div
-                className="header-wrapper"
+                className="title-heading-wrapper"
                 data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos="fade-up"

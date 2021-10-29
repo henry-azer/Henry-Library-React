@@ -4,7 +4,7 @@ function AuthorsSection() {
     return (
         <section id="authors-section" className="authors-section">
             <div
-                className="header-wrapper"
+                className="title-heading-wrapper"
                 data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos="fade-up"

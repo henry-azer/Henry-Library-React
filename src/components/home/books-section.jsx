@@ -13,7 +13,7 @@ function BooksSection() {
                 data-aos="fade-up"
             ></div>
             <div
-                className="header-wrapper"
+                className="title-heading-wrapper"
                 data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos="fade-up"
