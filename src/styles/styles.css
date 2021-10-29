@@ -524,7 +524,7 @@ body {
     justify-content: center;
     position: absolute;
     width: 100%;
-    top: 450px;
+    top: 440px;
 }
 
 .home-section .main-content {
@@ -1182,7 +1182,7 @@ body {
 
 /* BOOKS START */
 .books-section {
-    height: 135vh;
+    height: 140vh;
     position: relative;
     background-color: var(--backgroundColor);
     transition: 1s all;

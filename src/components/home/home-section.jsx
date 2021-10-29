@@ -30,7 +30,7 @@ function HomeSection() {
     });
 
     function scrollHandler() {
-        window.scrollTo({ top: 670, left: 0, behavior: "smooth" });
+        window.scrollTo({ top: 670, behavior: "smooth" });
     }
 
     function tick() {
