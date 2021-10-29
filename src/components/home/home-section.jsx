@@ -51,73 +51,79 @@ function HomeSection() {
             <Parallax y={[30, -30]}>
                 <div className="home-background"></div>
             </Parallax>
-            <div className="left-nav" style={{ opacity }}>
-                <Parallax y={[0, -150]}>
+
+            <div className="home-wrapper">
+                <div className="left-nav" style={{ opacity }}>
+                    <Parallax y={[0, -150]}>
+                        <div
+                            className="social-container"
+                            data-aos-delay="100"
+                            data-aos-duration="2000"
+                            data-aos="fade-down-right"
+                            data-aos-easing="ease-in"
+                        >
+                            <Button className="social-btn">
+                                <GitHubIcon className="social-icon" />
+                            </Button>
+                            <Button className="social-btn">
+                                <LinkedInIcon className="social-icon" />
+                            </Button>
+                            <Button className="social-btn">
+                                <FacebookIcon className="social-icon" />
+                            </Button>
+                        </div>
+                    </Parallax>
+                </div>
+
+                <div
+                    className="main-content"
+                    data-aos-delay="1000"
+                    data-aos-duration="3000"
+                    data-aos="fade-up"
+                >
+                    <Parallax y={[0, -250]}>
+                        <div className="content-container" style={{ opacity }}>
+                            <h2>To be a "Good Reader"</h2>
+                            <h1>READ NOW!</h1>
+                            <p>
+                                A reader lives a thousand lives before he dies,
+                                said Jojen. The man who never reads lives only
+                                one.
+                            </p>
+                            <p>
+                                <cite>―George R.R. Martin</cite>
+                            </p>
+                        </div>
+
+                        <div style={{ opacity }}>
+                            <BsChevronDown
+                                className="ChevronDown-button"
+                                data-aos-delay="2000"
+                                data-aos-duration="3000"
+                                data-aos-easing="ease-in-out"
+                                data-aos="fade-up"
+                                onClick={scrollHandler}
+                            />
+                        </div>
+                    </Parallax>
+                </div>
+
+                <div className="right-nav" style={{ opacity }}>
                     <div
-                        className="social-container"
-                        data-aos-delay="100"
+                        className="date-container"
                         data-aos-duration="2000"
+                        data-aos-delay="100"
                         data-aos="fade-down-right"
                         data-aos-easing="ease-in"
                     >
-                        <Button className="social-btn">
-                            <GitHubIcon className="social-icon" />
-                        </Button>
-                        <Button className="social-btn">
-                            <LinkedInIcon className="social-icon" />
-                        </Button>
-                        <Button className="social-btn">
-                            <FacebookIcon className="social-icon" />
-                        </Button>
+                        <Parallax x={[0, -60]}>
+                            <div className="date">{dateFormatter()}</div>
+                            <div className="time">
+                                {date.toLocaleTimeString()}
+                            </div>
+                        </Parallax>
                     </div>
-                </Parallax>
-            </div>
-
-            <div className="right-nav" style={{ opacity }}>
-                <div
-                    className="date-container"
-                    data-aos-duration="2000"
-                    data-aos-delay="100"
-                    data-aos="fade-down-right"
-                    data-aos-easing="ease-in"
-                >
-                    <Parallax x={[0, -60]}>
-                        <div className="date">{dateFormatter()}</div>
-                        <div className="time">{date.toLocaleTimeString()}</div>
-                    </Parallax>
                 </div>
-            </div>
-
-            <div
-                className="main-content"
-                data-aos-delay="1000"
-                data-aos-duration="3000"
-                data-aos="fade-up"
-            >
-                <Parallax y={[0, -250]}>
-                    <div className="content-container" style={{ opacity }}>
-                        <h2>To be a "Good Reader"</h2>
-                        <h1>READ NOW!</h1>
-                        <p>
-                            A reader lives a thousand lives before he dies, said
-                            Jojen. The man who never reads lives only one.
-                        </p>
-                        <p>
-                            <cite>―George R.R. Martin</cite>
-                        </p>
-                    </div>
-
-                    <div style={{ opacity }}>
-                        <BsChevronDown
-                            className="ChevronDown-button"
-                            data-aos-delay="2000"
-                            data-aos-duration="3000"
-                            data-aos-easing="ease-in-out"
-                            data-aos="fade-up"
-                            onClick={scrollHandler}
-                        />
-                    </div>
-                </Parallax>
             </div>
         </section>
     );
