@@ -6,6 +6,7 @@ import Loader from "./loader";
 import Header from "./header";
 import Footer from "./footer";
 import ContactUs from "./contact";
+import BackToTop from "./back-to-top";
 
 import HomeSection from "./home/home-section";
 import TutorialSection from "./home/tutorial-section";
@@ -16,7 +17,7 @@ import AuthorsSection from "./home/authors-section";
 
 const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
-    const [loadTimeout] = useState(12000);
+    const [loadTimeout] = useState(12);
 
     useEffect(() => {
         AOS.init();
@@ -26,17 +27,42 @@ const Home = () => {
         }, loadTimeout);
 
         document.addEventListener("scroll", () => {
-            if (window.scrollY > 1000 && window.scrollY < 2500) {
-                document.body.style.backgroundColor = "black";
+            if (window.scrollY > 1000 && window.scrollY < 2600) {
+                document.body.style.backgroundColor = "#000";
+                document.getElementById("home").style.backgroundColor = "#000";
             } else {
-                document.body.style.backgroundColor = "rgba(39, 20, 20, 0.97)";
+                document.body.style.backgroundColor = "#2b1717";
+                document.getElementById("home").style.backgroundColor =
+                    "#2b1717";
+            }
+
+            if (window.scrollY > 4500) {
+                document.getElementById("home").style.transition = "all 0s";
+                document.getElementById("home").style.backgroundColor = "#000";
+                document.getElementById("footer-scale").style.opacity = "1";
+                document
+                    .getElementById("contact")
+                    .classList.add("contact-scale");
+                document
+                    .getElementById("authors-section")
+                    .classList.add("authors-scale");
+            } else {
+                document.getElementById("home").style.transition = "all 1s";
+                document.getElementById("footer-scale").style.opacity = "0";
+                document
+                    .getElementById("contact")
+                    .classList.remove("contact-scale");
+                document
+                    .getElementById("authors-section")
+                    .classList.remove("authors-scale");
             }
         });
     });
 
     return (
-        <div className="home">
+        <div id="home" className="home">
             <Loader loaderTimeout={loadTimeout} />
+            <BackToTop />
             <Header />
             {isLoaded && <HomeSection />}
             <TutorialSection />

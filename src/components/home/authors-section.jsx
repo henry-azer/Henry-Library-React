@@ -2,7 +2,7 @@ import React from "react";
 
 function AuthorsSection() {
     return (
-        <section className="authors-section">
+        <section id="authors-section" className="authors-section">
             <div
                 className="header-wrapper"
                 data-aos-delay="100"

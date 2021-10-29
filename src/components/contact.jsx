@@ -9,7 +9,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 function ContactUs() {
     return (
-        <section className="contact">
+        <section id="contact" className="contact">
             <div
                 className="header-wrapper"
                 data-aos-delay="100"
@@ -20,7 +20,7 @@ function ContactUs() {
                 <h3>Reach out our social media accounts</h3>
             </div>
             <ul
-                class="social-icons"
+                className="social-icons"
                 data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos="fade-up"
