@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import Logo from "../..//resources/logo/logo.png";
 import LightLogo from "../..//resources/logo/light-logo.png";
 
-
 const Header = () => {
     const prevScrollY = useRef(0);
 
@@ -78,8 +77,12 @@ const Header = () => {
                     data-aos-easing="ease-in"
                     data-aos="fade-down-left"
                 >
-                    <Button className="login-btn">Log In</Button>
-                    <Button className="register-btn">Registry</Button>
+                    <Button className="login-btn" href="/login">
+                        Log In
+                    </Button>
+                    <Button className="register-btn" href="/register">
+                        Registry
+                    </Button>
                 </div>
             </div>
         </nav>

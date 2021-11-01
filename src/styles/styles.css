@@ -1,7 +1,7 @@
-/* GLOBAL START */
+/* GLOBAL ROUTE START */
 :root {
     --fontColor: #ffffff;
-    --fontSecondColor: #cfcfcf;
+    --fontSecondColor: #c4c4c4;
     --citeColor: ##aaaaaa;
     --fontHoverColor: #929191;
     --blackBackground: #000;
@@ -47,7 +47,9 @@ body {
 .card-header .date span,
 .tutorial-document .reading-rule p,
 .service-card figcaption p,
-.author-card p {
+.author-card p,
+.input-field input,
+.login-card .register-link a {
     font-family: "Raleway", sans-serif !important;
 }
 /* FONTS END */
@@ -75,6 +77,8 @@ body {
     transition: all 0.4s ease;
     overflow: hidden;
     border: 1px solid var(--borderColor);
+    outline-color: var(--iconColor);
+    outline-width: 1px;
 }
 
 .btn-1:before {
@@ -502,7 +506,156 @@ body {
     font-weight: 100;
 }
 /* FOOTER END */
-/* ------ GLOBAL END ------ */
+/* ------ GLOBAL ROUTE END ------ */
+
+/* ------ LOGIN ROUTE START ------ */
+.login .login-background {
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/3952078/pexels-photo-3952078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login .login-background::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blackBackground);
+    opacity: 0.5;
+}
+
+.login .login-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.login-wrapper .login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 550px;
+    background-color: var(--backgroundSecondColor);
+    color: var(--fontColor);
+}
+
+.login-card .logo-img {
+    margin-top: 40px;
+    width: 220px;
+    height: 130px;
+}
+
+.login-card .title-heading-wrapper {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.login-card .login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-form .input-field {
+    position: relative;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border: none;
+    overflow: visible;
+}
+
+.input-field input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 40px 8px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--borderColor);
+    font-size: 125%;
+    outline: none;
+    cursor: text;
+    background-color: transparent;
+    color: var(--fontSecondColor);
+}
+
+.input-field input::-webkit-input-placeholder {
+    transition: color 300ms ease;
+}
+
+.input-field input:not(:focus)::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input-field hr {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: var(--borderColor);
+    font-size: 1px;
+    will-change: transform, visibility;
+    transition: all 200ms ease-out;
+    transform: scaleX(0);
+    visibility: hidden;
+    z-index: 10;
+}
+
+.input-field input:focus ~ hr {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 130%;
+    color: var(--fontColor);
+    transform-origin: 0 -150%;
+    transition: transform 300ms ease;
+    pointer-events: none;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    transform: scale(0.7);
+}
+
+.login-form .button-wrapper {
+    margin-top: 50px;
+    transition: 1s all;
+}
+
+.login-card .register-link {
+    margin-top: 40px;
+}
+
+.login-card .register-link h3 {
+    font-weight: 100;
+}
+
+.login-card .register-link a {
+    color: var(--iconColor);
+    outline: none;
+}
+
+/* ------ LOGIN ROUTE END ------ */
 
 /* ------ HOME ROUTE START ------ */
 /* HOME START */
