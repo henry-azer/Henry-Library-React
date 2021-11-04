@@ -7,9 +7,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 
-function ContactUs() {
+function ContactUsSection() {
     return (
-        <section id="contact" className="contact">
+        <section id="contact-section" className="contact-section">
             <div
                 className="title-heading-wrapper"
                 data-aos-delay="100"
@@ -90,4 +90,4 @@ function ContactUs() {
     );
 }
 
-export default ContactUs;
+export default ContactUsSection;

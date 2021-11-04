@@ -5,7 +5,6 @@ import AOS from "aos";
 import Loader from "./global/loader";
 import Header from "./global/header";
 import Footer from "./global/footer";
-import ContactUs from "./global/contact";
 import BackToTop from "./global/back-to-top";
 
 import HomeSection from "./home/home-section";
@@ -14,6 +13,7 @@ import ReadingSection from "./home/reading-section";
 import ServicesSection from "./home/services-section";
 import BooksSection from "./home/books-section";
 import AuthorsSection from "./home/authors-section";
+import ContactUsSection from "./home/contact-section";
 
 const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -32,7 +32,7 @@ const Home = () => {
                 document.getElementById("home").style.backgroundColor = "#000";
                 document.getElementById("footer-scale").style.opacity = "1";
                 document
-                    .getElementById("contact")
+                    .getElementById("contact-section")
                     .classList.add("contact-scale");
                 document
                     .getElementById("authors-section")
@@ -43,7 +43,7 @@ const Home = () => {
                     "#2b1717";
                 document.getElementById("footer-scale").style.opacity = "0";
                 document
-                    .getElementById("contact")
+                    .getElementById("contact-section")
                     .classList.remove("contact-scale");
                 document
                     .getElementById("authors-section")
@@ -63,7 +63,7 @@ const Home = () => {
             <ServicesSection />
             <BooksSection />
             <AuthorsSection />
-            <ContactUs />
+            <ContactUsSection />
             <Footer />
         </div>
     );
