@@ -6,16 +6,16 @@ import { Formik } from "formik";
 
 import LightLogo from "..//resources/logo/light-logo.png";
 
-function Login() {
+function Register() {
     useEffect(() => {
         AOS.init();
     });
 
     return (
-        <section className="login">
-            <div className="login-background"></div>
-            <div className="login-wrapper">
-                <div className="login-card">
+        <section className="register">
+            <div className="register-background"></div>
+            <div className="register-wrapper">
+                <div className="register-card">
                     <img
                         className="logo-img"
                         src={LightLogo}
@@ -30,11 +30,16 @@ function Login() {
                         data-aos-duration="1000"
                         data-aos="fade-up"
                     >
-                        <h1>Library Log in</h1>
+                        <h1>Library Register</h1>
                     </div>
 
                     <Formik
-                        initialValues={{ email: "", password: "" }}
+                        initialValues={{
+                            email: "",
+                            username: "",
+                            password: "",
+                            passConfirm: "",
+                        }}
                         validate={(values) => {
                             const errors = {};
 
@@ -49,6 +54,14 @@ function Login() {
                                 errors.email = "Invalid email address.";
                             }
 
+                            // Username Validation
+                            const usernameRegex = /^[a-zA-Z0-9]+$/;
+                            if (!values.username) {
+                                errors.username = "Required";
+                            } else if (usernameRegex.test(values.username)) {
+                                errors.username = "Invalid username.";
+                            }
+
                             // Password Validation
                             const passwordRegex = /(?=.*[0-9])/;
                             if (!values.password) {
@@ -59,6 +72,13 @@ function Login() {
                             } else if (!passwordRegex.test(values.password)) {
                                 errors.password =
                                     "Password Must contain one number.";
+                            }
+
+                            // Confirm Password Validation
+                            if (values.passConfirm && values.password) {
+                                if (values.passConfirm !== values.password) {
+                                    errors.passConfirm = "Password not matched";
+                                }
                             }
 
                             return errors;
@@ -81,7 +101,7 @@ function Login() {
                         }) => (
                             <form
                                 onSubmit={handleSubmit}
-                                className="login-form"
+                                className="register-form"
                             >
                                 <fieldset
                                     class="input-field"
@@ -106,6 +126,29 @@ function Login() {
 
                                 <fieldset
                                     class="input-field"
+                                    data-aos-delay="150"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
+                                    <input
+                                        placeholder="Henry Azer"
+                                        autocomplete="off"
+                                        type="text"
+                                        name="username"
+                                        required
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        value={values.username}
+                                    />
+                                    <hr />
+                                    <label>Username</label>
+                                </fieldset>
+                                {errors.username &&
+                                    touched.username &&
+                                    errors.username}
+
+                                <fieldset
+                                    class="input-field"
                                     data-aos-delay="200"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
@@ -115,11 +158,7 @@ function Login() {
                                         autocomplete="off"
                                         name="password"
                                         required
-                                        type={
-                                            values.showPassword
-                                                ? "text"
-                                                : "password"
-                                        }
+                                        type="password"
                                         onChange={handleChange}
                                         onBlur={handleBlur}
                                         value={values.password}
@@ -130,6 +169,29 @@ function Login() {
                                 {errors.password &&
                                     touched.password &&
                                     errors.password}
+
+                                <fieldset
+                                    class="input-field"
+                                    data-aos-delay="200"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
+                                    <input
+                                        placeholder="* * * * * * * *"
+                                        autocomplete="off"
+                                        name="passConfirm"
+                                        required
+                                        type="password"
+                                        onChange={handleChange}
+                                        onBlur={handleBlur}
+                                        value={values.passConfirm}
+                                    />
+                                    <hr />
+                                    <label>Confirm Password</label>
+                                </fieldset>
+                                {errors.passConfirm &&
+                                    touched.passConfirm &&
+                                    errors.passConfirm}
 
                                 <div
                                     className="button-wrapper"
@@ -144,7 +206,7 @@ function Login() {
                                         type="submit"
                                         disabled={isSubmitting}
                                     >
-                                        log in
+                                        Register
                                     </a>
                                 </div>
                             </form>
@@ -152,14 +214,14 @@ function Login() {
                     </Formik>
 
                     <div
-                        className="register-link"
+                        className="login-link"
                         data-aos-delay="300"
                         data-aos-duration="1000"
                         data-aos="fade-up"
                     >
-                        <h3>haven't account? </h3>
-                        <a href="register" rel="noreferrer">
-                            Create new account
+                        <h3>have account? </h3>
+                        <a href="login" rel="noreferrer">
+                            Log In Now
                         </a>
                     </div>
                 </div>
@@ -168,4 +230,4 @@ function Login() {
     );
 }
 
-export default Login;
+export default Register;

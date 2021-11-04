@@ -523,7 +523,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--blackBackground);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 .login .login-wrapper {
@@ -548,7 +548,7 @@ body {
 }
 
 .login-card .logo-img {
-    margin-top: 40px;
+    margin-top: 20px;
     width: 220px;
     height: 130px;
 }
@@ -576,7 +576,7 @@ body {
 .input-field input {
     box-sizing: border-box;
     width: 100%;
-    padding: 15px 40px 8px;
+    padding: 15px 80px 8px;
     border: none;
     border-radius: 0;
     box-shadow: none;
@@ -656,6 +656,159 @@ body {
 }
 
 /* ------ LOGIN ROUTE END ------ */
+
+/* ------ Register ROUTE START ------ */
+.register .register-background {
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.register .register-background::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blackBackground);
+    opacity: 0.5;
+}
+
+.register .register-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.register-wrapper .register-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 550px;
+    background-color: var(--backgroundSecondColor);
+    color: var(--fontColor);
+}
+
+.register-card .logo-img {
+    margin-top: 20px;
+    width: 190px;
+    height: 110px;
+}
+
+.register-card .title-heading-wrapper {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.register-card .title-heading-wrapper h1 {
+    font-size: 34px;
+}
+
+.register-card .register-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register-form .input-field {
+    position: relative;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+    overflow: visible;
+}
+
+.input-field input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 80px 8px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--borderColor);
+    font-size: 125%;
+    outline: none;
+    cursor: text;
+    background-color: transparent;
+    color: var(--fontSecondColor);
+}
+
+.input-field input::-webkit-input-placeholder {
+    transition: color 300ms ease;
+}
+
+.input-field input:not(:focus)::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.input-field hr {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: var(--borderColor);
+    font-size: 1px;
+    will-change: transform, visibility;
+    transition: all 200ms ease-out;
+    transform: scaleX(0);
+    visibility: hidden;
+    z-index: 10;
+}
+
+.input-field input:focus ~ hr {
+    transform: scaleX(1);
+    visibility: visible;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 130%;
+    color: var(--fontColor);
+    transform-origin: 0 -150%;
+    transition: transform 300ms ease;
+    pointer-events: none;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    transform: scale(0.7);
+}
+
+.register-form .button-wrapper {
+    margin-top: 40px;
+    transition: 1s all;
+}
+
+.register-card .login-link {
+    margin-top: 10px;
+}
+
+.register-card .login-link h3 {
+    font-weight: 100;
+}
+
+.register-card .login-link a {
+    color: var(--iconColor);
+    outline: none;
+}
+
+/* ------ Register ROUTE END ------ */
 
 /* ------ HOME ROUTE START ------ */
 /* HOME START */
