@@ -63,13 +63,37 @@ function HomeSection() {
                             data-aos-easing="ease-in"
                         >
                             <Button className="social-btn">
-                                <GitHubIcon className="social-icon" />
+                                <GitHubIcon
+                                    className="social-icon"
+                                    onClick={() =>
+                                        window.open(
+                                            "https://github.com/Henry-Azer",
+                                            "_blank"
+                                        )
+                                    }
+                                />
                             </Button>
                             <Button className="social-btn">
-                                <LinkedInIcon className="social-icon" />
+                                <LinkedInIcon
+                                    className="social-icon"
+                                    onClick={() =>
+                                        window.open(
+                                            "https://www.linkedin.com/in/henry-azer-1220121a7",
+                                            "_blank"
+                                        )
+                                    }
+                                />
                             </Button>
                             <Button className="social-btn">
-                                <FacebookIcon className="social-icon" />
+                                <FacebookIcon
+                                    className="social-icon"
+                                    onClick={() =>
+                                        window.open(
+                                            "https://www.facebook.com/HeNaRyAzEr",
+                                            "_blank"
+                                        )
+                                    }
+                                />
                             </Button>
                         </div>
                     </Parallax>

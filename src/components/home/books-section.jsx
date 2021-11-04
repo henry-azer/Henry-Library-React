@@ -40,9 +40,9 @@ function BooksSection() {
                             data-aos="fade-down"
                         >
                             <div className="date">
-                                <span className="day">12</span>
-                                <span className="month">Aug</span>
-                                <span className="year">2016</span>
+                                <span className="day">13</span>
+                                <span className="month">Jul</span>
+                                <span className="year">2021</span>
                             </div>
                             <ul className="menu-content">
                                 <li>
@@ -63,17 +63,14 @@ function BooksSection() {
                         </div>
                         <div className="card-data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
+                                <span className="author">Author</span>
                                 <h1 className="title">
-                                    <p>
-                                        Stranger Things: The sound of the Upside
-                                        Down
-                                    </p>
+                                    <p>Book Name</p>
                                 </h1>
                                 <p className="text">
-                                    The antsy of Netflix will eagerly anticipate
-                                    the digital release of the Survive
-                                    soundtrack, out today.
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Iusto quibusdam quae error
+                                    dolor a aspernatur.
                                 </p>
                                 <a href="google.com" className="read-more-btn">
                                     Read more
@@ -123,17 +120,14 @@ function BooksSection() {
                         </div>
                         <div className="card-data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
+                                <span className="author">Author</span>
                                 <h1 className="title">
-                                    <p>
-                                        Stranger Things: The sound of the Upside
-                                        Down
-                                    </p>
+                                    <p>Book Name</p>
                                 </h1>
                                 <p className="text">
-                                    The antsy of Netflix will eagerly anticipate
-                                    the digital release of the Survive
-                                    soundtrack, out today.
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Iusto quibusdam quae error
+                                    dolor a aspernatur.
                                 </p>
                                 <a href="google.com" className="read-more-btn">
                                     Read more
@@ -183,17 +177,14 @@ function BooksSection() {
                         </div>
                         <div className="card-data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
+                                <span className="author">Author</span>
                                 <h1 className="title">
-                                    <p>
-                                        Stranger Things: The sound of the Upside
-                                        Down
-                                    </p>
+                                    <p>Book Name</p>
                                 </h1>
                                 <p className="text">
-                                    The antsy of Netflix will eagerly anticipate
-                                    the digital release of the Survive
-                                    soundtrack, out today.
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Iusto quibusdam quae error
+                                    dolor a aspernatur.
                                 </p>
                                 <a href="google.com" className="read-more-btn">
                                     Read more
@@ -243,17 +234,14 @@ function BooksSection() {
                         </div>
                         <div className="card-data">
                             <div className="content">
-                                <span className="author">Jane Doe</span>
+                                <span className="author">Author</span>
                                 <h1 className="title">
-                                    <p>
-                                        Stranger Things: The sound of the Upside
-                                        Down
-                                    </p>
+                                    <p>Book Name</p>
                                 </h1>
                                 <p className="text">
-                                    The antsy of Netflix will eagerly anticipate
-                                    the digital release of the Survive
-                                    soundtrack, out today.
+                                    Lorem ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Iusto quibusdam quae error
+                                    dolor a aspernatur.
                                 </p>
                                 <a href="google.com" className="read-more-btn">
                                     Read more

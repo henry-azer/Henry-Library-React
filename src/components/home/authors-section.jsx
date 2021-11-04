@@ -16,22 +16,22 @@ function AuthorsSection() {
             <div className="authors-cards">
                 <figure
                     className="author-card"
-                    data-aos-delay="150"
+                    data-aos-delay="200"
                     data-aos-duration="1000"
                     data-aos="fade-up"
                 >
                     <div className="profile-image">
                         <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample47.jpg"
-                            alt="sample47"
+                            src="https://brittlepaper.com/wp-content/uploads/2019/11/image.flvcrop.2048.5000.jpeg"
+                            alt="alain-mabanckou"
                         />
                     </div>
                     <figcaption>
-                        <h3>Fleece Marigold</h3>
-                        <h4>Founder</h4>
+                        <h3>Alain Mabanckou</h3>
+                        <h4>Author</h4>
                         <p>
-                            Which is worse, that everyone has his price, or that
-                            the price is always so low.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Expedita odio magni voluptas nisi.
                         </p>
                     </figcaption>
                 </figure>
@@ -43,37 +43,37 @@ function AuthorsSection() {
                 >
                     <div className="profile-image">
                         <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample83.jpg"
-                            alt="sample83"
+                            src="https://brittlepaper.com/wp-content/uploads/2019/11/image.flvcrop.2048.5000.jpeg"
+                            alt="alain-mabanckou"
                         />
                     </div>
                     <figcaption>
-                        <h3>Norman Gordon</h3>
-                        <h4>Web Designer</h4>
+                        <h3>Alain Mabanckou</h3>
+                        <h4>Author</h4>
                         <p>
-                            I'm killing time while I wait for life to shower me
-                            with meaning and happiness.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Expedita odio magni voluptas nisi.
                         </p>
                     </figcaption>
                 </figure>
                 <figure
                     className="author-card"
-                    data-aos-delay="250"
+                    data-aos-delay="200"
                     data-aos-duration="1000"
                     data-aos="fade-up"
                 >
                     <div className="profile-image">
                         <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample70.jpg"
-                            alt="sample70"
+                            src="https://brittlepaper.com/wp-content/uploads/2019/11/image.flvcrop.2048.5000.jpeg"
+                            alt="alain-mabanckou"
                         />
                     </div>
                     <figcaption>
-                        <h3>Ruby Von Rails</h3>
-                        <h4>Public Relations</h4>
+                        <h3>Alain Mabanckou</h3>
+                        <h4>Author</h4>
                         <p>
-                            The only skills I have the patience to learn are
-                            those that have no real application in life.{" "}
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Expedita odio magni voluptas nisi.
                         </p>
                     </figcaption>
                 </figure>

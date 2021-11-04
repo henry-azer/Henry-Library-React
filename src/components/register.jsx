@@ -8,6 +8,8 @@ import LightLogo from "..//resources/logo/light-logo.png";
 
 function Register() {
     useEffect(() => {
+        document.title = "Register | Henry Library";
+
         AOS.init();
     });
 
