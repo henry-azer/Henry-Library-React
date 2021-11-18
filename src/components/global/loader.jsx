@@ -25,7 +25,7 @@ const Loader = (props) => {
                         <img className="loader-logo" src={Logo} alt="Logo" />
                         <div className="loading-bar"></div>
                         <div className="lines-container">
-                            <i className="line-1 line-animation"> </i>
+                            <i className="line-1 line-animation"></i>
                             <i className="line-2 line-animation"></i>
                             <i className="line-3 line-animation"></i>
                             <i className="line-4 line-animation"></i>

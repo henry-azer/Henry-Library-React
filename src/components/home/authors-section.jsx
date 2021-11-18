@@ -79,16 +79,16 @@ function AuthorsSection() {
                 </figure>
             </div>
 
-            <div
-                className="button-wrapper"
+            <a
+                href="underDev.com"
+                className="btn-1"
+                rel="noreferrer"
                 data-aos-delay="100"
                 data-aos-duration="1000"
                 data-aos="flip-down"
             >
-                <a href="underDev.com" className="btn-1" rel="noreferrer">
-                    More Authors
-                </a>
-            </div>
+                More Authors
+            </a>
         </section>
     );
 }

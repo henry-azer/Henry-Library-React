@@ -55,7 +55,7 @@ const Header = () => {
                 >
                     <Button className="item">Books</Button>
                     <Button className="item">Authors</Button>
-                    <Button className="item">About us</Button>
+                    <Button className="item" href="/about-us">About us</Button>
                 </div>
 
                 <div

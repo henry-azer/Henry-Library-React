@@ -20,9 +20,8 @@ const Home = () => {
     const [loadTimeout] = useState(12);
 
     useEffect(() => {
-        document.title = "Home | Henry Library";
-
         AOS.init();
+        document.title = "Home | Henry Library";
 
         setTimeout(() => {
             setIsLoaded(true);

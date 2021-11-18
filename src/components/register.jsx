@@ -106,14 +106,14 @@ function Register() {
                                 className="register-form"
                             >
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="150"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="henryazer@outlook.com"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         type="text"
                                         name="email"
                                         required
@@ -127,14 +127,14 @@ function Register() {
                                 {errors.email && touched.email && errors.email}
 
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="150"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="Henry Azer"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         type="text"
                                         name="username"
                                         required
@@ -150,14 +150,14 @@ function Register() {
                                     errors.username}
 
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="200"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="* * * * * * * *"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         name="password"
                                         required
                                         type="password"
@@ -173,14 +173,14 @@ function Register() {
                                     errors.password}
 
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="200"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="* * * * * * * *"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         name="passConfirm"
                                         required
                                         type="password"

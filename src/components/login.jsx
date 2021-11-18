@@ -86,14 +86,14 @@ function Login() {
                                 className="login-form"
                             >
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="150"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="henryazer@outlook.com"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         type="text"
                                         name="email"
                                         required
@@ -107,14 +107,14 @@ function Login() {
                                 {errors.email && touched.email && errors.email}
 
                                 <fieldset
-                                    class="input-field"
+                                    className="input-field"
                                     data-aos-delay="200"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
                                     <input
                                         placeholder="* * * * * * * *"
-                                        autocomplete="off"
+                                        autoComplete="off"
                                         name="password"
                                         required
                                         type={
@@ -133,22 +133,18 @@ function Login() {
                                     touched.password &&
                                     errors.password}
 
-                                <div
-                                    className="button-wrapper"
+                                <a
+                                    href="underDev.com"
+                                    className="btn-1"
+                                    rel="noreferrer"
+                                    type="submit"
+                                    disabled={isSubmitting}
                                     data-aos-delay="250"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
-                                    <a
-                                        href="underDev.com"
-                                        className="btn-1"
-                                        rel="noreferrer"
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                    >
-                                        log in
-                                    </a>
-                                </div>
+                                    log in
+                                </a>
                             </form>
                         )}
                     </Formik>
