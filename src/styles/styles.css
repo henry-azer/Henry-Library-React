@@ -1909,10 +1909,8 @@ body {
     max-width: 700px;
 }
 
-/* Common style */
-.personal-card figure {
+.personal-card .info-wrapper {
     position: relative;
-    z-index: 1;
     display: inline-block;
     overflow: hidden;
     margin: -0.135em;
@@ -1921,13 +1919,12 @@ body {
     background: #0f1c27;
     text-align: center;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .personal-card .info-wrapper img {
     display: block;
     position: relative;
-    width: 60%;
-    margin: auto;
     object-fit: cover;
 }
 
@@ -1953,9 +1950,6 @@ body {
     height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-
 .personal-card .info-wrapper h2 {
     word-spacing: -0.15em;
     font-weight: 300;
@@ -1975,23 +1969,18 @@ body {
     font-size: 68.5%;
 }
 
-/* TEMP */
 .personal-card .info-wrapper img {
     width: -webkit-calc(100% + 100px);
     width: calc(100% + 100px);
     opacity: 1;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(-50px, -45px, -40px) scale(0.9);
     transform: translate3d(-30px, 0, 0) scale(1.12);
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     object-fit: cover;
 }
 
 .personal-card .info-wrapper:hover img {
     opacity: 0.5;
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
     transform: translate3d(0, 0, 0) scale(1);
     object-fit: cover;
 }
@@ -2016,15 +2005,12 @@ body {
     position: absolute;
     top: 120px;
     left: 35px;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
 .personal-card .info-wrapper:hover hr {
     opacity: 0;
-    -webkit-transform: translate3d(0, 100px, 0);
     transform: translate3d(0, 100px, 0);
 }
 
@@ -2036,20 +2022,17 @@ body {
     border-left: 2px solid #fff;
     text-align: left;
     opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(0, -40px, 0);
     transform: translate3d(0-40px, 0);
 }
 
 .personal-card .info-wrapper:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
 /* Responsive - ongoing work */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
     h2 {
         font-size: 20px;
     }
@@ -2091,12 +2074,12 @@ body {
         height: 0;
         font-size: 0.9em;
     }
-}
+} */
 /* TEMP */
 
 .about-us .recent-projects {
     position: relative;
-    height: 340vh;
+    height: 330vh;
     border-top: 1px solid var(--border-color);
 }
 
@@ -2197,15 +2180,11 @@ body {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    transition: 0.5s all;
 }
 
-.btn {
-    background: rgb(188 87 36);
-    color: rgb(255 255 255);
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5em;
-    border-radius: 0.25em;
+.project-wrapper .project-img img:hover {
+    transform: scale(1.2);
 }
 
 @supports (animation-timeline: works) {

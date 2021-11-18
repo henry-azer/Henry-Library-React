@@ -4,6 +4,7 @@ import AOS from "aos";
 
 import { BsChevronRight } from "react-icons/bs";
 
+import HenryAzerImg from "..//resources/images/henry-azer.jpg";
 import HenryJewelryImg from "..//resources/projects/henry-jewelry.png";
 import HenryHotelImg from "..//resources/projects/henry-hotel.png";
 import HenryTodoListImg from "..//resources/projects/henry-todo-list.png";
@@ -56,12 +57,9 @@ function AboutUs() {
                         className="info-wrapper"
                         data-aos-delay="100"
                         data-aos-duration="3000"
-                        data-aos="flip-down"
+                        data-aos="fade-up"
                     >
-                        <img
-                            src="https://scontent.fcai2-1.fna.fbcdn.net/v/t31.18172-8/20690366_2035835423311047_5359789795468054116_o.jpg?_nc_cat=108&ccb=1-5&_nc_sid=174925&_nc_ohc=UawSJq6EJbAAX9tkG-c&tn=LDdLzQOld4yostLV&_nc_ht=scontent.fcai2-1.fna&oh=fc4fe321bef33f2d2a5711df08fbed2e&oe=61B41347"
-                            alt="henry-azer"
-                        />
+                        <img src={HenryAzerImg} alt="henry-azer" />
                         <figcaption>
                             <h2>
                                 Henry &nbsp;<span>Azer</span>
@@ -81,7 +79,7 @@ function AboutUs() {
                         className="mid-description"
                         data-aos-delay="50"
                         data-aos-duration="1000"
-                        data-aos="fade-in"
+                        data-aos="fade-up"
                     >
                         <div className="title-heading-wrapper">
                             <h1>Full-Stack</h1>
@@ -143,7 +141,12 @@ function AboutUs() {
                 >
                     <li className="project project-1">
                         <div className="project-wrapper">
-                            <div className="project-description">
+                            <div
+                                className="project-description"
+                                data-aos-delay="50"
+                                data-aos-duration="1500"
+                                data-aos="fade-left"
+                            >
                                 <h2
                                     onClick={() =>
                                         window.open(
@@ -161,20 +164,17 @@ function AboutUs() {
                                     Data JPA, Spring Security In addition to
                                     Front-End development and Deployment.
                                 </p>
-                                <div
-                                    className="button-wrapper"
-                                    data-aos-delay="100"
-                                    data-aos-duration="1000"
-                                    data-aos="flip-down"
+                                <a
+                                    className="btn-2"
+                                    href="https://henry-jewelry.herokuapp.com"
+                                    target="_blank"
+                                    rel="noreferrer"
                                 >
-                                    <a
-                                        href="https://henry-jewelry.herokuapp.com"
-                                        className="btn-1"
-                                        rel="noreferrer"
-                                    >
+                                    <span>
                                         View Project
-                                    </a>
-                                </div>
+                                        <BsChevronRight className="btn-arrow" />
+                                    </span>
+                                </a>
                             </div>
                             <figure className="project-img">
                                 <img
@@ -192,7 +192,12 @@ function AboutUs() {
                     </li>
                     <li className="project project-2">
                         <div className="project-wrapper">
-                            <div className="project-description">
+                            <div
+                                className="project-description"
+                                data-aos-delay="100"
+                                data-aos-duration="1500"
+                                data-aos="fade-left"
+                            >
                                 <h2
                                     onClick={() =>
                                         window.open(
@@ -216,20 +221,17 @@ function AboutUs() {
                                     <br />
                                     password: henry0123
                                 </p>
-                                <div
-                                    className="button-wrapper"
-                                    data-aos-delay="100"
-                                    data-aos-duration="1000"
-                                    data-aos="flip-down"
+                                <a
+                                    className="btn-2"
+                                    href="https://henry-hotel-reservation.herokuapp.com"
+                                    target="_blank"
+                                    rel="noreferrer"
                                 >
-                                    <a
-                                        href="https://henry-hotel-reservation.herokuapp.com"
-                                        className="btn-1"
-                                        rel="noreferrer"
-                                    >
+                                    <span>
                                         View Project
-                                    </a>
-                                </div>
+                                        <BsChevronRight className="btn-arrow" />
+                                    </span>
+                                </a>
                             </div>
                             <figure className="project-img">
                                 <img
@@ -247,7 +249,12 @@ function AboutUs() {
                     </li>
                     <li className="project project-3" id="project-3">
                         <div className="project-wrapper">
-                            <div className="project-description">
+                            <div
+                                className="project-description"
+                                data-aos-delay="150"
+                                data-aos-duration="1500"
+                                data-aos="fade-left"
+                            >
                                 <h2
                                     onClick={() =>
                                         window.open(
@@ -267,10 +274,11 @@ function AboutUs() {
                                 <a
                                     className="btn-2"
                                     href="https://henry-todo-list.herokuapp.com"
+                                    target="_blank"
                                     rel="noreferrer"
                                 >
                                     <span>
-                                        View Project{" "}
+                                        View Project
                                         <BsChevronRight className="btn-arrow" />
                                     </span>
                                 </a>
