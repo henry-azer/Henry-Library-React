@@ -126,7 +126,11 @@ function Register() {
                                     <hr />
                                     <label>Email</label>
                                 </fieldset>
-                                <span>
+                                <span
+                                    data-aos-delay="150"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
                                     {errors.email &&
                                         touched.email &&
                                         errors.email}
@@ -151,7 +155,11 @@ function Register() {
                                     <hr />
                                     <label>Username</label>
                                 </fieldset>
-                                <span>
+                                <span
+                                    data-aos-delay="150"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
                                     {errors.username &&
                                         touched.username &&
                                         errors.username}
@@ -201,7 +209,11 @@ function Register() {
                                     <hr />
                                     <label>Confirm Password</label>
                                 </fieldset>
-                                <span>
+                                <span
+                                    data-aos-delay="200"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
                                     {errors.passConfirm &&
                                         touched.passConfirm &&
                                         errors.passConfirm}
