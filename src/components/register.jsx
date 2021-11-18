@@ -184,7 +184,11 @@ function Register() {
                                     <hr />
                                     <label>Password</label>
                                 </fieldset>
-                                <span>
+                                <span
+                                    data-aos-delay="200"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
                                     {errors.password &&
                                         touched.password &&
                                         errors.password}
