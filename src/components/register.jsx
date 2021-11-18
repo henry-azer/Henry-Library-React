@@ -4,6 +4,8 @@ import AOS from "aos";
 
 import { Formik } from "formik";
 
+import { BsPencilSquare } from "react-icons/bs";
+
 import LightLogo from "..//resources/logo/light-logo.png";
 
 function Register() {
@@ -124,7 +126,11 @@ function Register() {
                                     <hr />
                                     <label>Email</label>
                                 </fieldset>
-                                {errors.email && touched.email && errors.email}
+                                <span>
+                                    {errors.email &&
+                                        touched.email &&
+                                        errors.email}
+                                </span>
 
                                 <fieldset
                                     className="input-field"
@@ -145,9 +151,11 @@ function Register() {
                                     <hr />
                                     <label>Username</label>
                                 </fieldset>
-                                {errors.username &&
-                                    touched.username &&
-                                    errors.username}
+                                <span>
+                                    {errors.username &&
+                                        touched.username &&
+                                        errors.username}
+                                </span>
 
                                 <fieldset
                                     className="input-field"
@@ -168,9 +176,11 @@ function Register() {
                                     <hr />
                                     <label>Password</label>
                                 </fieldset>
-                                {errors.password &&
-                                    touched.password &&
-                                    errors.password}
+                                <span>
+                                    {errors.password &&
+                                        touched.password &&
+                                        errors.password}
+                                </span>
 
                                 <fieldset
                                     className="input-field"
@@ -191,26 +201,27 @@ function Register() {
                                     <hr />
                                     <label>Confirm Password</label>
                                 </fieldset>
-                                {errors.passConfirm &&
-                                    touched.passConfirm &&
-                                    errors.passConfirm}
+                                <span>
+                                    {errors.passConfirm &&
+                                        touched.passConfirm &&
+                                        errors.passConfirm}
+                                </span>
 
-                                <div
-                                    className="button-wrapper"
+                                <a
+                                    className="btn-2"
+                                    href="underDev.com"
+                                    rel="noreferrer"
+                                    type="submit"
+                                    disabled={isSubmitting}
                                     data-aos-delay="250"
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
-                                    <a
-                                        href="underDev.com"
-                                        className="btn-1"
-                                        rel="noreferrer"
-                                        type="submit"
-                                        disabled={isSubmitting}
-                                    >
+                                    <span>
                                         Register
-                                    </a>
-                                </div>
+                                        <BsPencilSquare className="btn-icon" />
+                                    </span>
+                                </a>
                             </form>
                         )}
                     </Formik>

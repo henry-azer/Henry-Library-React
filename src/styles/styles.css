@@ -137,7 +137,7 @@ body {
     transition: 0.3s;
 }
 
-.btn-2 span .btn-arrow {
+.btn-2 span .btn-icon {
     position: absolute;
     opacity: 0;
     top: 0;
@@ -149,7 +149,7 @@ body {
     padding-right: 20px;
 }
 
-.btn-2:hover .btn-arrow {
+.btn-2:hover .btn-icon {
     opacity: 1;
     right: -15px;
 }
@@ -506,23 +506,24 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    transition: 1s all;
 }
 
 .login .login-background::after {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--black-background);
     opacity: 0.4;
 }
 
 .login .login-wrapper {
-    position: absolute;
+    position: fixed;
     opacity: 0.8;
     top: 0;
-    height: 100%;
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -533,14 +534,13 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 550px;
+    width: 450px;
     background-color: var(--background-second-color);
     color: var(--font-color);
 }
 
 .login-card .logo-img {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 220px;
     height: 130px;
 }
@@ -548,6 +548,10 @@ body {
 .login-card .title-heading-wrapper {
     margin-top: 30px;
     width: 100%;
+}
+
+.login-card .title-heading-wrapper h1 {
+    font-size: 32px;
 }
 
 .login-card .login-form {
@@ -559,36 +563,41 @@ body {
 .login-form .input-field {
     position: relative;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 10px;
     border: none;
     overflow: visible;
 }
 
-.input-field input {
+.login-form .input-field input {
     box-sizing: border-box;
-    width: 100%;
-    padding: 15px 80px 8px;
+    width: 300px;
+    padding: 15px 50px 10px;
     border: none;
     border-radius: 0;
     box-shadow: none;
     border-bottom: 1px solid var(--border-color);
-    font-size: 125%;
+    font-size: 18px;
     outline: none;
     cursor: text;
     background-color: transparent;
     color: var(--font-second-color);
 }
 
-.input-field input::-webkit-input-placeholder {
+.login-form .input-field input::-webkit-input-placeholder {
     transition: color 300ms ease;
 }
 
-.input-field input:not(:focus)::-webkit-input-placeholder {
+.login-form .input-field input:not(:focus)::-webkit-input-placeholder {
     color: transparent;
 }
 
-.input-field hr {
+/* Keyboard Popup */
+/* .login-form .input-field input:focus ~ .login-form .login-wrapper {
+    height: 300vh !important;
+} */
+
+.login-form .input-field hr {
     content: "";
     display: block;
     position: absolute;
@@ -608,31 +617,35 @@ body {
     z-index: 10;
 }
 
-.input-field input:focus ~ hr {
+.login-form .input-field input:focus ~ hr {
     transform: scaleX(1);
     visibility: visible;
 }
 
-.input-field label {
+.login-form .input-field label {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 130%;
+    font-size: 100%;
     color: var(--font-color);
     transform-origin: 0 -150%;
     transition: transform 300ms ease;
     pointer-events: none;
 }
 
-.input-field input:focus ~ label,
-.input-field input:valid ~ label {
+.login-form input-field input:focus ~ label,
+.login-form .input-field input:valid ~ label {
     transform: scale(0.7);
+}
+
+.login-form span {
+    font-size: 14px;
 }
 
 .login-form a {
     display: flex;
     justify-content: center;
-    margin: 50px auto 0 auto;
+    margin: 40px auto 0 auto;
     transition: 1s all;
 }
 
@@ -664,16 +677,16 @@ body {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--black-background);
     opacity: 0.5;
 }
 
 .register .register-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     opacity: 0.8;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -685,25 +698,25 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
-    width: 550px;
+    height: 100vh;
+    width: 450px;
     background-color: var(--background-second-color);
     color: var(--font-color);
 }
 
 .register-card .logo-img {
-    margin-top: 20px;
-    width: 190px;
-    height: 110px;
+    margin-top: 30px;
+    width: 220px;
+    height: 130px;
 }
 
 .register-card .title-heading-wrapper {
-    margin-top: 15px;
+    margin-top: 30px;
     width: 100%;
 }
 
 .register-card .title-heading-wrapper h1 {
-    font-size: 34px;
+    font-size: 32px;
 }
 
 .register-card .register-form {
@@ -721,30 +734,30 @@ body {
     overflow: visible;
 }
 
-.input-field input {
+.register-form .input-field input {
     box-sizing: border-box;
-    width: 100%;
-    padding: 15px 80px 8px;
+    width: 300px;
+    padding: 15px 50px 10px;
     border: none;
     border-radius: 0;
     box-shadow: none;
     border-bottom: 1px solid var(--border-color);
-    font-size: 125%;
+    font-size: 18px;
     outline: none;
     cursor: text;
     background-color: transparent;
     color: var(--font-second-color);
 }
 
-.input-field input::-webkit-input-placeholder {
+.register-form .input-field input::-webkit-input-placeholder {
     transition: color 300ms ease;
 }
 
-.input-field input:not(:focus)::-webkit-input-placeholder {
+.register-form .input-field input:not(:focus)::-webkit-input-placeholder {
     color: transparent;
 }
 
-.input-field hr {
+.register-form .input-field hr {
     content: "";
     display: block;
     position: absolute;
@@ -764,12 +777,12 @@ body {
     z-index: 10;
 }
 
-.input-field input:focus ~ hr {
+.register-form .input-field input:focus ~ hr {
     transform: scaleX(1);
     visibility: visible;
 }
 
-.input-field label {
+.register-form .input-field label {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -780,15 +793,19 @@ body {
     pointer-events: none;
 }
 
-.input-field input:focus ~ label,
-.input-field input:valid ~ label {
+.register-form .input-field input:focus ~ label,
+.register-form .input-field input:valid ~ label {
     transform: scale(0.7);
 }
 
-.register-form .button-wrapper {
+.register-form span {
+    font-size: 14px;
+}
+
+.register-form a {
     display: flex;
     justify-content: center;
-    margin: 50px auto 0 auto;
+    margin: 40px auto 0 auto;
     transition: 1s all;
 }
 
@@ -2285,7 +2302,7 @@ body {
 
 /* RESPONSIVE START */
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 }
 
 /* Medium devices (desktops, 992px and up) */

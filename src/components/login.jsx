@@ -4,6 +4,8 @@ import AOS from "aos";
 
 import { Formik } from "formik";
 
+import { BsFillKeyFill } from "react-icons/bs";
+
 import LightLogo from "..//resources/logo/light-logo.png";
 
 function Login() {
@@ -104,7 +106,15 @@ function Login() {
                                     <hr />
                                     <label>Email</label>
                                 </fieldset>
-                                {errors.email && touched.email && errors.email}
+                                <span
+                                    data-aos-delay="150"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
+                                    {errors.email &&
+                                        touched.email &&
+                                        errors.email}
+                                </span>
 
                                 <fieldset
                                     className="input-field"
@@ -129,13 +139,19 @@ function Login() {
                                     <hr />
                                     <label>Password</label>
                                 </fieldset>
-                                {errors.password &&
-                                    touched.password &&
-                                    errors.password}
+                                <span
+                                    data-aos-delay="200"
+                                    data-aos-duration="1000"
+                                    data-aos="fade-up"
+                                >
+                                    {errors.password &&
+                                        touched.password &&
+                                        errors.password}
+                                </span>
 
                                 <a
+                                    className="btn-2"
                                     href="underDev.com"
-                                    className="btn-1"
                                     rel="noreferrer"
                                     type="submit"
                                     disabled={isSubmitting}
@@ -143,7 +159,10 @@ function Login() {
                                     data-aos-duration="1000"
                                     data-aos="fade-up"
                                 >
-                                    log in
+                                    <span>
+                                        LOG IN
+                                        <BsFillKeyFill className="btn-icon" />
+                                    </span>
                                 </a>
                             </form>
                         )}
