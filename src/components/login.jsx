@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-
-import AOS from "aos";
+import { Link } from "react-router-dom";
 
 import { Formik } from "formik";
 
@@ -11,8 +10,6 @@ import LightLogo from "..//resources/logo/light-logo.png";
 function Login() {
     useEffect(() => {
         document.title = "Log In | Henry Library";
-
-        AOS.init();
     });
 
     return (
@@ -20,20 +17,14 @@ function Login() {
             <div className="login-background"></div>
             <div className="login-wrapper">
                 <div className="login-card">
-                    <img
-                        className="logo-img"
-                        src={LightLogo}
-                        alt="logo-img"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    />
-                    <div
-                        className="title-heading-wrapper"
-                        data-aos-delay="100"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    >
+                    <Link to="/">
+                        <img
+                            className="logo-img"
+                            src={LightLogo}
+                            alt="logo-img"
+                        />
+                    </Link>
+                    <div className="title-heading-wrapper">
                         <h1>Library Log in</h1>
                     </div>
 
@@ -87,12 +78,7 @@ function Login() {
                                 onSubmit={handleSubmit}
                                 className="login-form"
                             >
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <fieldset className="input-field">
                                     <input
                                         placeholder="henryazer@outlook.com"
                                         autoComplete="off"
@@ -106,22 +92,13 @@ function Login() {
                                     <hr />
                                     <label>Email</label>
                                 </fieldset>
-                                <span
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <span>
                                     {errors.email &&
                                         touched.email &&
                                         errors.email}
                                 </span>
 
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <fieldset className="input-field">
                                     <input
                                         placeholder="* * * * * * * *"
                                         autoComplete="off"
@@ -139,11 +116,7 @@ function Login() {
                                     <hr />
                                     <label>Password</label>
                                 </fieldset>
-                                <span
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <span>
                                     {errors.password &&
                                         touched.password &&
                                         errors.password}
@@ -155,9 +128,6 @@ function Login() {
                                     rel="noreferrer"
                                     type="submit"
                                     disabled={isSubmitting}
-                                    data-aos-delay="250"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
                                 >
                                     <span>
                                         LOG IN
@@ -168,12 +138,7 @@ function Login() {
                         )}
                     </Formik>
 
-                    <div
-                        className="register-link"
-                        data-aos-delay="300"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    >
+                    <div className="register-link">
                         <h3>haven't account? </h3>
                         <a href="register" rel="noreferrer">
                             Create new account

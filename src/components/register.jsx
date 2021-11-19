@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-
-import AOS from "aos";
+import { Link } from "react-router-dom";
 
 import { Formik } from "formik";
 
@@ -11,8 +10,6 @@ import LightLogo from "..//resources/logo/light-logo.png";
 function Register() {
     useEffect(() => {
         document.title = "Register | Henry Library";
-
-        AOS.init();
     });
 
     return (
@@ -20,20 +17,14 @@ function Register() {
             <div className="register-background"></div>
             <div className="register-wrapper">
                 <div className="register-card">
-                    <img
-                        className="logo-img"
-                        src={LightLogo}
-                        alt="logo-img"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    />
-                    <div
-                        className="title-heading-wrapper"
-                        data-aos-delay="100"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    >
+                    <Link to="/">
+                        <img
+                            className="logo-img"
+                            src={LightLogo}
+                            alt="logo-img"
+                        />
+                    </Link>
+                    <div className="title-heading-wrapper">
                         <h1>Library Register</h1>
                     </div>
 
@@ -42,7 +33,6 @@ function Register() {
                             email: "",
                             username: "",
                             password: "",
-                            passConfirm: "",
                         }}
                         validate={(values) => {
                             const errors = {};
@@ -78,13 +68,6 @@ function Register() {
                                     "Password Must contain one number.";
                             }
 
-                            // Confirm Password Validation
-                            if (values.passConfirm && values.password) {
-                                if (values.passConfirm !== values.password) {
-                                    errors.passConfirm = "Password not matched";
-                                }
-                            }
-
                             return errors;
                         }}
                         onSubmit={(values, { setSubmitting }) => {
@@ -107,12 +90,7 @@ function Register() {
                                 onSubmit={handleSubmit}
                                 className="register-form"
                             >
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <fieldset className="input-field">
                                     <input
                                         placeholder="henryazer@outlook.com"
                                         autoComplete="off"
@@ -126,22 +104,13 @@ function Register() {
                                     <hr />
                                     <label>Email</label>
                                 </fieldset>
-                                <span
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <span>
                                     {errors.email &&
                                         touched.email &&
                                         errors.email}
                                 </span>
 
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <fieldset className="input-field">
                                     <input
                                         placeholder="Henry Azer"
                                         autoComplete="off"
@@ -155,22 +124,13 @@ function Register() {
                                     <hr />
                                     <label>Username</label>
                                 </fieldset>
-                                <span
-                                    data-aos-delay="150"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <span>
                                     {errors.username &&
                                         touched.username &&
                                         errors.username}
                                 </span>
 
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <fieldset className="input-field">
                                     <input
                                         placeholder="* * * * * * * *"
                                         autoComplete="off"
@@ -184,43 +144,10 @@ function Register() {
                                     <hr />
                                     <label>Password</label>
                                 </fieldset>
-                                <span
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
+                                <span>
                                     {errors.password &&
                                         touched.password &&
                                         errors.password}
-                                </span>
-
-                                <fieldset
-                                    className="input-field"
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
-                                    <input
-                                        placeholder="* * * * * * * *"
-                                        autoComplete="off"
-                                        name="passConfirm"
-                                        required
-                                        type="password"
-                                        onChange={handleChange}
-                                        onBlur={handleBlur}
-                                        value={values.passConfirm}
-                                    />
-                                    <hr />
-                                    <label>Confirm Password</label>
-                                </fieldset>
-                                <span
-                                    data-aos-delay="200"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
-                                >
-                                    {errors.passConfirm &&
-                                        touched.passConfirm &&
-                                        errors.passConfirm}
                                 </span>
 
                                 <a
@@ -229,9 +156,6 @@ function Register() {
                                     rel="noreferrer"
                                     type="submit"
                                     disabled={isSubmitting}
-                                    data-aos-delay="250"
-                                    data-aos-duration="1000"
-                                    data-aos="fade-up"
                                 >
                                     <span>
                                         Register
@@ -242,12 +166,7 @@ function Register() {
                         )}
                     </Formik>
 
-                    <div
-                        className="login-link"
-                        data-aos-delay="300"
-                        data-aos-duration="1000"
-                        data-aos="fade-up"
-                    >
+                    <div className="login-link">
                         <h3>have account? </h3>
                         <a href="login" rel="noreferrer">
                             Log In Now

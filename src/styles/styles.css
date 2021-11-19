@@ -501,29 +501,28 @@ body {
 
 /* ------ LOGIN ROUTE START ------ */
 .login .login-background {
+    position: fixed;
     height: 100vh;
+    width: 100%;
     background-image: url("https://images.pexels.com/photos/3952078/pexels-photo-3952078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    transition: 1s all;
 }
 
 .login .login-background::after {
     content: "";
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--black-background);
     opacity: 0.4;
 }
 
 .login .login-wrapper {
-    position: fixed;
-    opacity: 0.8;
-    top: 0;
+    position: absolute;
     width: 100%;
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -534,7 +533,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 450px;
+    min-height: 100vh;
+    height: fit-content;
+    width: 430px;
+    opacity: 0.8;
     background-color: var(--background-second-color);
     color: var(--font-color);
 }
@@ -592,11 +594,6 @@ body {
     color: transparent;
 }
 
-/* Keyboard Popup */
-/* .login-form .input-field input:focus ~ .login-form .login-wrapper {
-    height: 300vh !important;
-} */
-
 .login-form .input-field hr {
     content: "";
     display: block;
@@ -633,7 +630,7 @@ body {
     pointer-events: none;
 }
 
-.login-form input-field input:focus ~ label,
+.login-form .input-field input:focus ~ label,
 .login-form .input-field input:valid ~ label {
     transform: scale(0.7);
 }
@@ -650,7 +647,7 @@ body {
 }
 
 .login-card .register-link {
-    margin-top: 40px;
+    padding: 40px 0;
 }
 
 .login-card .register-link h3 {
@@ -666,7 +663,9 @@ body {
 
 /* ------ Register ROUTE START ------ */
 .register .register-background {
+    position: fixed;
     height: 100vh;
+    width: 100%;
     background-image: url("https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-position: center;
     background-attachment: fixed;
@@ -675,19 +674,17 @@ body {
 
 .register .register-background::after {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--black-background);
     opacity: 0.5;
 }
 
 .register .register-wrapper {
-    position: fixed;
-    top: 0;
-    opacity: 0.8;
-    height: 100vh;
+    position: absolute;
     width: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -698,8 +695,10 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     width: 450px;
+    opacity: 0.8;
     background-color: var(--background-second-color);
     color: var(--font-color);
 }
@@ -810,7 +809,7 @@ body {
 }
 
 .register-card .login-link {
-    margin-top: 10px;
+    padding: 40px 0;
 }
 
 .register-card .login-link h3 {
