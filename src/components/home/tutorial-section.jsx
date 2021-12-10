@@ -1,8 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import ModalVideo from "react-modal-video";
-import "react-modal-video/css/modal-video.css";
-
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import PauseCircleIcon from "@mui/icons-material/PauseCircle";
@@ -13,7 +10,6 @@ import ReadingRulesVid from "../..//resources/videos/reading-rules.mp4";
 function TutorialSection() {
     const videoRef = useRef(null);
     const [isPlayingVideo, setPlayingVideo] = useState(true);
-    const [isModalVideoOpen, setModalVideo] = useState(false);
 
     useEffect(() => {
         isPlayingVideo ? videoRef.current.play() : videoRef.current.pause();
@@ -33,9 +29,9 @@ function TutorialSection() {
                 <div className="tutorial-info">
                     <div
                         className="tutorial-video"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos="fade-right"
+                        data-aos-delay="150"
+                        data-aos-duration="2000"
+                        data-aos="flip-down"
                     >
                         <img
                             className="tablet-frame"
@@ -63,9 +59,9 @@ function TutorialSection() {
                     </div>
                     <div
                         className="tutorial-document"
-                        data-aos-delay="50"
-                        data-aos-duration="1000"
-                        data-aos="fade-left"
+                        data-aos-delay="100"
+                        data-aos-duration="2500"
+                        data-aos="fade-up"
                     >
                         <div className="reading-rule">
                             <h1>- Find the reason you need to read:</h1>
@@ -109,19 +105,23 @@ function TutorialSection() {
                 >
                     <PlayArrowIcon
                         className="watch-button"
-                        onClick={() => setModalVideo(true)}
+                        onClick={() =>
+                            window.open(
+                                "https://www.youtube.com/watch?v=ndbXgQFhfn8",
+                                "_blank"
+                            )
+                        }
                     />
-                    <h1 onClick={() => setModalVideo(true)}>
+                    <h1
+                        onClick={() =>
+                            window.open(
+                                "https://www.youtube.com/watch?v=ndbXgQFhfn8",
+                                "_blank"
+                            )
+                        }
+                    >
                         Watch the full video
                     </h1>
-                </div>
-                <div className="popup-tutorial">
-                    <ModalVideo
-                        channel="youtube"
-                        isOpen={isModalVideoOpen}
-                        videoId="ndbXgQFhfn8"
-                        onClose={() => setModalVideo(false)}
-                    />
                 </div>
             </div>
         </section>

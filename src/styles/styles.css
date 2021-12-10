@@ -964,7 +964,7 @@ body {
 
 /* TUTORIAL START */
 .tutorial-section {
-    height: 80vh;
+    padding-bottom: 100px;
     position: relative;
     background-color: transparent;
     transition: 1s all;
@@ -991,32 +991,31 @@ body {
 .tutorial-wrapper .tutorial-info {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-}
-
-.tutorial-info .tutorial-video {
-    width: 46%;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .tutorial-video .tablet-frame {
     position: absolute;
-    left: -3%;
-    width: 95%;
-    height: 95%;
+    top: 10px;
+    left: -20px;
+    width: 690px;
+    height: 400px;
     z-index: 60;
 }
 
 .tutorial-video .reading-video {
-    position: absolute;
-    top: 15px;
-    width: 90%;
+    width: 650px;
+    height: 420px;
     z-index: 50;
 }
 
 .tutorial-video .play-icon {
     position: absolute;
     bottom: 45px;
-    right: 13%;
+    right: 25px;
     font-size: 35px;
     color: var(--font-color);
     z-index: 60;
@@ -1024,11 +1023,9 @@ body {
 }
 
 .tutorial-info .tutorial-document {
-    width: 45%;
-}
-
-.tutorial-document .reading-rule {
-    margin-bottom: 40px;
+    position: relative;
+    width: 650px;
+    padding: 20px 0;
 }
 
 .tutorial-document .reading-rule h1 {
@@ -1045,15 +1042,15 @@ body {
 .tutorial-wrapper .full-tutorial {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 30px;
 }
 
 .full-tutorial .watch-button {
-    margin-top: 20px;
     padding: 20px;
     background-color: var(--font-color);
     border: 2px solid var(--border-color);
+    color: var(--border-color);
     font-size: 30px;
     transition: 0.5s all;
     margin-right: 20px;
@@ -1065,8 +1062,6 @@ body {
     border: 1px solid var(--border-color);
     color: var(--font-color);
     transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
 }
 
 .full-tutorial h1 {
@@ -1087,37 +1082,11 @@ body {
 .full-tutorial:hover h1::after {
     width: 102%;
 }
-
-.tutorial-wrapper .popup-tutorial {
-    z-index: 900;
-}
-
-.popup-tutorial .modal-video-close-btn {
-    outline: none;
-    cursor: pointer;
-    right: -100px;
-}
-
-.popup-tutorial .modal-video {
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 999;
-}
-
-.popup-tutorial .modal-video-body {
-    max-width: 1100px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    top: 40px;
-    left: 200px;
-}
 /* TUTORIAL END */
 
 /* READING START */
 .reading-section {
-    height: 125vh;
-    margin-top: 120px;
+    padding: 20px 0 100px 0;
     background-color: transparent;
     transition: 1s all;
     z-index: 20;
@@ -1128,7 +1097,7 @@ body {
     margin: 80px auto;
     font-size: 70px;
     color: var(--font-color);
-    z-index: 50;
+    z-index: 0;
 }
 
 .moving-text .marquee-text-1 {
@@ -1140,18 +1109,16 @@ body {
 
 .moving-text .marquee-text-2 {
     user-select: none;
-    -webkit-text-stroke-width: 1.5px;
     text-transform: uppercase;
+    -webkit-text-stroke-width: 1.5px;
 }
 
 .reading-section .reading-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.reading-wrapper .reading-banner {
-    width: 48%;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .reading-banner .reading-img {
@@ -1160,6 +1127,7 @@ body {
     padding: 6px;
     min-width: 250px;
     max-width: 450px;
+    left: -150px;
     width: 100%;
     box-shadow: none !important;
     -webkit-transform: translateZ(0);
@@ -1311,17 +1279,12 @@ body {
 /* READING END */
 
 /* SERVICES START */
-.services-section {
-    height: 53vh;
-}
-
 .services-section .services-background {
     background-image: url("https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    z-index: 100;
-    height: 50vh;
+    padding-bottom: 70px;
 }
 
 .services-section .services-title h1 {
@@ -1352,11 +1315,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    gap: 40px;
 }
 
 .services-cards .service-card {
     position: relative;
-    margin: 30px;
+    margin: 0;
     min-width: 310px;
     max-width: 310px;
     width: 100%;
@@ -1368,9 +1334,7 @@ body {
 }
 
 .service-card * {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
 }
 
@@ -1509,7 +1473,8 @@ body {
 
 /* BOOKS START */
 .books-section {
-    height: 145vh;
+    height: fit-content;
+    padding-bottom: 30px;
     position: relative;
     background-color: var(--background-color);
     transition: 1s all;
@@ -1524,21 +1489,28 @@ body {
     height: 45vh;
 }
 
+.books-section .title-heading-wrapper {
+    position: relative;
+    margin: 40px auto 30px auto;
+    width: 500px;
+}
+
 .books-section .books-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px 0 20px auto;
+    align-items: center;
+    padding: 20px 0 50px 0;
+    gap: 40px;
 }
 
 .books-cards .book-card {
-    margin: 0 40px 55px 0;
+    width: 260px;
     border: 1px solid var(--border-color);
 }
 
 .book-card .card-wrapper {
     min-height: 350px;
-    width: 260px;
     position: relative;
     overflow: hidden;
 }
@@ -1659,26 +1631,35 @@ body {
 
 /* AUTHORS START */
 .authors-section {
-    height: 95vh;
+    height: fit-content;
+    padding: 50px 0 80px 0;
     position: relative;
     background-color: var(--background-color);
     transition: 1s all;
     z-index: 20;
 }
-
+/* 
 .authors-scale {
     border: 1px solid var(--border-color);
     transform: scale(0.9);
     -ms-transform: scale(0.9);
     -webkit-transform: scale(0.9);
     transition: 1.5s all;
+} */
+
+.authors-section .title-heading-wrapper {
+    position: relative;
+    margin: 40px auto 30px auto;
+    width: 500px;
 }
 
 .authors-section .authors-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 50px auto;
+    align-items: center;
+    padding: 30px 0 50px 0;
+    gap: 40px;
 }
 
 .authors-cards .author-card {
@@ -1755,9 +1736,7 @@ body {
 
 /* CONTACT START */
 .contact-section {
-    min-height: 30vh;
-    height: fit-content;
-    padding: 20px 0;
+    padding: 50px 0 100px 0;
     position: relative;
     background-color: var(--background-color);
     border-top: 1px solid var(--border-color);
@@ -1765,7 +1744,7 @@ body {
     margin-bottom: 400px;
     transition: 1s all;
 }
-
+/* 
 .contact-scale {
     border: 1px solid var(--border-color);
     transform: scale(0.9);
@@ -1780,15 +1759,23 @@ body {
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     transition: 1s all;
+} */
+
+.contact-section .title-heading-wrapper {
+    position: relative;
+    margin: 10px auto 30px auto;
+    width: 500px;
 }
 
 .contact-section .social-icons {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 40px;
     list-style: none;
-    margin: 0 auto;
+    margin: 0 20px;
 }
 
 .social-icons li {
@@ -1844,6 +1831,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 0 auto 50px auto;
+    padding-bottom: 50px;
 }
 
 .personal-info .left-container {
@@ -2003,20 +1991,19 @@ body {
 
 .about-us .recent-projects {
     position: relative;
-    min-height: 265vh;
-    height: fit-content;
+    padding: 20px 0;
 }
 
 .recent-projects .title-heading-wrapper {
     position: relative;
-    margin: 40px auto 30px auto;
+    margin: 40px auto 00px auto;
     width: 500px;
 }
 
 .recent-projects .projects {
     width: 70%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
@@ -2215,16 +2202,123 @@ body {
 
 /* RESPONSIVE START */
 /* Small devices (tablets, 768px and up) */
-@media (max-width: 910px) {
-    /* ------ HOME ROUTE START ------ */
+@media (max-width: 768px) {
 
-    /* CONTACT START */
-    .contact-section {
-        min-height: 35vh;
+    .reading-section .reading-wrapper {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .contact-section .title-heading-wrapper {
+    .reading-banner .reading-img {
+        left: 0;
+        margin: 0;
+        width: 380px;
+    }
+    
+    .reading-wrapper .reading-text {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    /* ------ HOME ROUTE START ------ */
+
+    /* TUTORIAL START */
+    .tutorial-video .tablet-frame {
+        top: 10px;
+        left: -10px;
+        width: 310px;
+        height: 180px;
+    }
+
+    .tutorial-video .reading-video {
         width: 300px;
+        height: 200px;
+    }
+
+    .tutorial-video .play-icon {
+        bottom: 25px;
+        right: 20px;
+        font-size: 26px;
+    }
+
+    .tutorial-info .tutorial-video {
+        width: 300px;
+    }
+
+    .tutorial-info .tutorial-document {
+        width: 300px;
+    }
+
+    .full-tutorial .watch-button {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .full-tutorial h1 {
+        font-size: 26px;
+    }
+    /* TUTORIAL END */
+
+    /* READING START */
+    .reading-section .moving-text {
+        font-size: 50px;
+    }
+
+    /* READING END */
+
+    /* ------ HOME ROUTE END ------ */
+}
+
+@media (max-width: 910px) {
+    /* READING START */
+    /* .reading-wrapper .reading-banner {
+        width: 48%;
+        top: 0;
+        left: -50px;
+    } */
+
+   
+    /* READING END */
+
+    /* SERVICE START */
+    .services-section .services-cards {
+        flex-direction: column;
+    }
+
+    /* SERVICE END */
+
+    /* BOOK START */
+    .books-section .title-heading-wrapper {
+        width: 380px;
+    }
+
+    .books-section .books-cards {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .books-cards .book-card {
+        margin: 0;
+        padding: 0;
+        width: 260px;
+        border: 1px solid var(--border-color);
+    }
+    /* BOOK END */
+
+    /* AUTHORS START */
+    .authors-section .title-heading-wrapper {
+        width: 380px;
+    }
+
+    .authors-section .authors-cards {
+        flex-direction: column;
+    }
+    /* AUTHORS END */
+
+    /* CONTACT START */
+    .contact-section .title-heading-wrapper {
+        width: 380px;
     }
     /* CONTACT END */
 
@@ -2236,8 +2330,7 @@ body {
     }
 
     .about-us .recent-projects {
-        position: relative;
-        height: 330vh;
+        padding: 20px 0 100px 0;
     }
 
     .personal-info .mid-container {
@@ -2275,7 +2368,6 @@ body {
         flex-direction: column;
         width: 80%;
         margin: 0 auto;
-        padding: 0 !important;
     }
 
     .projects .project {

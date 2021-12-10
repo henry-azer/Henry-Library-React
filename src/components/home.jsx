@@ -27,30 +27,30 @@ const Home = () => {
             setIsLoaded(true);
         }, loadTimeout);
 
-        document.addEventListener("scroll", () => {
-            if (window.scrollY > 4600) {
-                document.getElementById("home").style.transition = "all 0s";
-                document.getElementById("home").style.backgroundColor = "#000";
-                document.getElementById("footer-scale").style.opacity = "1";
-                document
-                    .getElementById("contact-section")
-                    .classList.add("contact-scale");
-                document
-                    .getElementById("authors-section")
-                    .classList.add("authors-scale");
-            } else {
-                document.getElementById("home").style.transition = "all 1s";
-                document.getElementById("home").style.backgroundColor =
-                    "#2b1717";
-                document.getElementById("footer-scale").style.opacity = "0";
-                document
-                    .getElementById("contact-section")
-                    .classList.remove("contact-scale");
-                document
-                    .getElementById("authors-section")
-                    .classList.remove("authors-scale");
-            }
-        });
+        // document.addEventListener("scroll", () => {
+        //     if (window.scrollY > 4600) {
+        //         document.getElementById("home").style.transition = "all 0s";
+        //         document.getElementById("home").style.backgroundColor = "#000";
+        //         document.getElementById("footer-scale").style.opacity = "1";
+        //         document
+        //             .getElementById("contact-section")
+        //             .classList.add("contact-scale");
+        //         document
+        //             .getElementById("authors-section")
+        //             .classList.add("authors-scale");
+        //     } else {
+        //         document.getElementById("home").style.transition = "all 1s";
+        //         document.getElementById("home").style.backgroundColor =
+        //             "#2b1717";
+        //         document.getElementById("footer-scale").style.opacity = "0";
+        //         document
+        //             .getElementById("contact-section")
+        //             .classList.remove("contact-scale");
+        //         document
+        //             .getElementById("authors-section")
+        //             .classList.remove("authors-scale");
+        //     }
+        // });
     });
 
     return (
