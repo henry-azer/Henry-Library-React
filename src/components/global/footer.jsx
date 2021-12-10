@@ -5,7 +5,6 @@ import Logo from "../..//resources/logo/light-logo.png";
 function Footer() {
     return (
         <footer className="footer">
-            <div id="footer-scale">
                 <div className="footer-wrapper">
                     <div className="logo">
                         <img src={Logo} className="logo-img" alt="logo" />
@@ -14,7 +13,7 @@ function Footer() {
                         <h1>list</h1>
                         <ul>
                             <li>1</li>
-                            <li>1</li>
+                            <li>1</li> 
                             <li>1</li>
                             <li>1</li>
                         </ul>
@@ -69,7 +68,6 @@ function Footer() {
                         <h1>Developed by: Henry Azer</h1>
                     </div>
                 </div>
-            </div>
         </footer>
     );
 }
