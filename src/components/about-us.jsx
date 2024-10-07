@@ -116,10 +116,6 @@ function AboutUs() {
                             <h1>Full-Stack</h1>
                             <h3>Back-End & Front-End</h3>
                         </div>
-                        <img
-                            src="https://chennaitraining.in/wp-content/uploads/2020/02/fullstack.png"
-                            alt="full-stack"
-                        />
                         <p>
                             Full-stack refers to a group of programming
                             languages and tools a developer learns to handle

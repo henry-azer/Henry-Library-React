@@ -1869,7 +1869,7 @@ body {
 }
 
 .mid-container .mid-wrapper {
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 30px 0;
     border: 1px solid var(--border-color);
     background-color: var(--background-second-color);
@@ -1900,8 +1900,8 @@ body {
 }
 
 .personal-card > img {
-    height: 170px;
-    width: fit-content;
+    height: 200px;
+    width: 100%;
     vertical-align: top;
 }
 
